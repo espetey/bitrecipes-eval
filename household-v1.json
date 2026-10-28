@@ -1,0 +1,3095 @@
+{
+  "version": "v1.0",
+  "synthetic": true,
+  "note": "SYNTHETIC HOUSEHOLD. All names, preferences, and history are invented for the bake-off. No real person, family, or household data is used. Member names (Robin, Taylor, Jamie, Alex) are invented test names and do not refer to any real individual.",
+  "household_id": "bakeoff-household-v1",
+  "members": [
+    {
+      "name": "Robin",
+      "role": "member"
+    },
+    {
+      "name": "Taylor",
+      "role": "member"
+    },
+    {
+      "name": "Jamie",
+      "role": "member"
+    },
+    {
+      "name": "Alex",
+      "role": "member"
+    }
+  ],
+  "household_size": 4,
+  "settings": {
+    "grocery_source": "Generic Grocery Pickup",
+    "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+    "best_day": "Saturday",
+    "budget_normal": 180
+  },
+  "stated_constraints_note": "Constraints in the briefs are stated household constraints recorded by the household. They are NOT medical advice and NOT an allergy-safety certification. The scorer checks them only as stated-constraint matches.",
+  "preference_pairs": [
+    {
+      "preferred": "salsa-verde",
+      "preferred_name": "Salsa Verde",
+      "over": "salsa-red",
+      "over_name": "Salsa, Red",
+      "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+    },
+    {
+      "preferred": "chicken-thighs-boneless",
+      "preferred_name": "Chicken Thighs, Boneless",
+      "over": "chicken-breast-boneless",
+      "over_name": "Chicken Breast, Boneless",
+      "context": "Reorder history prefers thighs over breast for stir-fry."
+    },
+    {
+      "preferred": "bread-sourdough",
+      "preferred_name": "Bread, Sourdough",
+      "over": "bread-white-sandwich",
+      "over_name": "Bread, White Sandwich",
+      "context": "Household rates sourdough higher for toast, when it is in the cart."
+    },
+    {
+      "preferred": "apples-honeycrisp",
+      "preferred_name": "Apples, Honeycrisp",
+      "over": "apples-gala",
+      "over_name": "Apples, Gala",
+      "context": "Kids' snack preference in the last two weeks, when both were offered."
+    },
+    {
+      "preferred": "ground-beef-90-10",
+      "preferred_name": "Ground Beef, 90/10",
+      "over": "ground-beef-80-20",
+      "over_name": "Ground Beef, 80/20",
+      "context": "Leaner ground beef preferred for tacos, price permitting."
+    },
+    {
+      "preferred": "milk-2",
+      "preferred_name": "Milk, 2%",
+      "over": "milk-whole",
+      "over_name": "Milk, Whole",
+      "context": "Usual milk reorder is 2%."
+    }
+  ],
+  "reorder_history": [
+    {
+      "catalog_id": "eggs-12-count",
+      "name": "Eggs, 12 Count",
+      "times_ordered": 8
+    },
+    {
+      "catalog_id": "milk-2",
+      "name": "Milk, 2%",
+      "times_ordered": 7
+    },
+    {
+      "catalog_id": "chicken-thighs-boneless",
+      "name": "Chicken Thighs, Boneless",
+      "times_ordered": 5
+    },
+    {
+      "catalog_id": "salsa-verde",
+      "name": "Salsa Verde",
+      "times_ordered": 3
+    }
+  ],
+  "briefs": [
+    {
+      "format": "bitrecipes-agent-brief/v1",
+      "version": "v1",
+      "task_id": "normal-week",
+      "title": "Normal week",
+      "household_id": "bakeoff-household-v1",
+      "week_of": "2026-11-09",
+      "settings": {
+        "grocery_source": "Generic Grocery Pickup",
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+        "best_day": "Saturday",
+        "budget": 180,
+        "household_size": 4
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "text": "Roast chicken, potatoes, green beans",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Tuesday",
+          "text": "Spaghetti, meatballs, salad",
+          "servings": 4,
+          "picked_by": "Taylor",
+          "status": "ready"
+        },
+        {
+          "day": "Wednesday",
+          "text": "Tacos",
+          "servings": 4,
+          "picked_by": "Jamie",
+          "status": "ready"
+        },
+        {
+          "day": "Thursday",
+          "text": "Salmon, rice, broccoli",
+          "servings": 4,
+          "picked_by": "Alex",
+          "status": "ready"
+        },
+        {
+          "day": "Friday",
+          "text": "Chicken stir-fry, rice noodles, peppers",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        }
+      ],
+      "calls": {
+        "breakfast": {
+          "mode": "week",
+          "text": "Eggs, toast, cereal",
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "cereal-toasted-oats",
+              "name": "Cereal, Toasted Oats",
+              "qty": 1,
+              "unit": "box"
+            }
+          ]
+        },
+        "lunch": {
+          "mode": "week",
+          "text": "Turkey sandwiches, apples",
+          "ingredients": [
+            {
+              "catalog_id": "deli-turkey-slices",
+              "name": "Deli Turkey Slices",
+              "qty": 2,
+              "unit": "pack"
+            },
+            {
+              "catalog_id": "bread-white-sandwich",
+              "name": "Bread, White Sandwich",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 2,
+              "unit": "lb"
+            }
+          ]
+        },
+        "snacks": {
+          "mode": "week",
+          "text": "Apples, crackers, cheese",
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ]
+        }
+      },
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "leftovers": [],
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "type": "budget",
+          "text": "Cart total must stay within $180."
+        },
+        {
+          "id": "no-pork",
+          "type": "stated_household_constraint",
+          "text": "Household states it does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "forbids_tags": [
+            "pork"
+          ]
+        },
+        {
+          "id": "snack-cap",
+          "type": "budget",
+          "text": "At most $25 of the cart may be snack items (aisle pantry items tagged as snacks in the brief: crackers, popcorn, cookies).",
+          "max_spend": 25,
+          "applies_to_names": [
+            "Crackers, Wheat",
+            "Crackers, Saltine",
+            "Pretzels",
+            "Popcorn, Microwave",
+            "Cookies, Chocolate Chip",
+            "Cookies, Oatmeal"
+          ]
+        }
+      ],
+      "catalog_overrides": {},
+      "expected_lines": [
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "yukon-gold-potatoes",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "green-beans",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "spaghetti",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "meatballs-frozen-beef",
+          "ingredient": "Meatballs, Frozen Beef",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "marinara-sauce",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "romaine-lettuce",
+          "ingredient": "Romaine Lettuce",
+          "qty": 1,
+          "unit": "head"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "parmesan-grated",
+          "ingredient": "Parmesan, Grated",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1,
+          "unit": "tub"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "salmon-fillets",
+          "ingredient": "Salmon Fillets",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "jasmine-rice",
+          "ingredient": "Jasmine Rice",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "broccoli-crowns",
+          "ingredient": "Broccoli Crowns",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "chicken-thighs-boneless",
+          "ingredient": "Chicken Thighs, Boneless",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "rice-noodles",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "bell-peppers-red",
+          "ingredient": "Bell Peppers, Red",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "soy-sauce",
+          "ingredient": "Soy Sauce",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "eggs-12-count",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "bread-whole-wheat",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "cereal-toasted-oats",
+          "ingredient": "Cereal, Toasted Oats",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "deli-turkey-slices",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "bread-white-sandwich",
+          "ingredient": "Bread, White Sandwich",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "crackers-wheat",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "notes": "Base brief: 5 dinners, breakfast/lunch/snacks all-week, staples from pantry list. No budget pressure beyond the $180 cap.",
+      "preference_pairs": [
+        {
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+        },
+        {
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "context": "Reorder history prefers thighs over breast for stir-fry."
+        },
+        {
+          "preferred": "bread-sourdough",
+          "preferred_name": "Bread, Sourdough",
+          "over": "bread-white-sandwich",
+          "over_name": "Bread, White Sandwich",
+          "context": "Household rates sourdough higher for toast, when it is in the cart."
+        },
+        {
+          "preferred": "apples-honeycrisp",
+          "preferred_name": "Apples, Honeycrisp",
+          "over": "apples-gala",
+          "over_name": "Apples, Gala",
+          "context": "Kids' snack preference in the last two weeks, when both were offered."
+        },
+        {
+          "preferred": "ground-beef-90-10",
+          "preferred_name": "Ground Beef, 90/10",
+          "over": "ground-beef-80-20",
+          "over_name": "Ground Beef, 80/20",
+          "context": "Leaner ground beef preferred for tacos, price permitting."
+        },
+        {
+          "preferred": "milk-2",
+          "preferred_name": "Milk, 2%",
+          "over": "milk-whole",
+          "over_name": "Milk, Whole",
+          "context": "Usual milk reorder is 2%."
+        }
+      ],
+      "reorder_history": [
+        {
+          "catalog_id": "eggs-12-count",
+          "name": "Eggs, 12 Count",
+          "times_ordered": 8
+        },
+        {
+          "catalog_id": "milk-2",
+          "name": "Milk, 2%",
+          "times_ordered": 7
+        },
+        {
+          "catalog_id": "chicken-thighs-boneless",
+          "name": "Chicken Thighs, Boneless",
+          "times_ordered": 5
+        },
+        {
+          "catalog_id": "salsa-verde",
+          "name": "Salsa Verde",
+          "times_ordered": 3
+        }
+      ]
+    },
+    {
+      "format": "bitrecipes-agent-brief/v1",
+      "version": "v1",
+      "task_id": "budget-week",
+      "title": "Budget week",
+      "household_id": "bakeoff-household-v1",
+      "week_of": "2026-11-09",
+      "settings": {
+        "grocery_source": "Generic Grocery Pickup",
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+        "best_day": "Saturday",
+        "budget": 126,
+        "household_size": 4
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "text": "Roast chicken, potatoes, green beans",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Tuesday",
+          "text": "Spaghetti, meatballs, salad",
+          "servings": 4,
+          "picked_by": "Taylor",
+          "status": "ready"
+        },
+        {
+          "day": "Wednesday",
+          "text": "Tacos",
+          "servings": 4,
+          "picked_by": "Jamie",
+          "status": "ready"
+        },
+        {
+          "day": "Thursday",
+          "text": "Salmon, rice, broccoli",
+          "servings": 4,
+          "picked_by": "Alex",
+          "status": "ready"
+        },
+        {
+          "day": "Friday",
+          "text": "Chicken stir-fry, rice noodles, peppers",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        }
+      ],
+      "calls": {
+        "breakfast": {
+          "mode": "week",
+          "text": "Eggs, toast, cereal",
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "cereal-toasted-oats",
+              "name": "Cereal, Toasted Oats",
+              "qty": 1,
+              "unit": "box"
+            }
+          ]
+        },
+        "lunch": {
+          "mode": "week",
+          "text": "Turkey sandwiches, apples",
+          "ingredients": [
+            {
+              "catalog_id": "deli-turkey-slices",
+              "name": "Deli Turkey Slices",
+              "qty": 2,
+              "unit": "pack"
+            },
+            {
+              "catalog_id": "bread-white-sandwich",
+              "name": "Bread, White Sandwich",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 2,
+              "unit": "lb"
+            }
+          ]
+        },
+        "snacks": {
+          "mode": "week",
+          "text": "Apples, crackers, cheese",
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ]
+        }
+      },
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "leftovers": [],
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "type": "budget",
+          "text": "Cart total must stay within $126."
+        },
+        {
+          "id": "no-pork",
+          "type": "stated_household_constraint",
+          "text": "Household states it does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "forbids_tags": [
+            "pork"
+          ]
+        },
+        {
+          "id": "snack-cap",
+          "type": "budget",
+          "text": "At most $25 of the cart may be snack items (aisle pantry items tagged as snacks in the brief: crackers, popcorn, cookies).",
+          "max_spend": 25,
+          "applies_to_names": [
+            "Crackers, Wheat",
+            "Crackers, Saltine",
+            "Pretzels",
+            "Popcorn, Microwave",
+            "Cookies, Chocolate Chip",
+            "Cookies, Oatmeal"
+          ]
+        }
+      ],
+      "catalog_overrides": {},
+      "expected_lines": [
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "yukon-gold-potatoes",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "green-beans",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "spaghetti",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "meatballs-frozen-beef",
+          "ingredient": "Meatballs, Frozen Beef",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "marinara-sauce",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "romaine-lettuce",
+          "ingredient": "Romaine Lettuce",
+          "qty": 1,
+          "unit": "head"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "parmesan-grated",
+          "ingredient": "Parmesan, Grated",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1,
+          "unit": "tub"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "salmon-fillets",
+          "ingredient": "Salmon Fillets",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "jasmine-rice",
+          "ingredient": "Jasmine Rice",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "broccoli-crowns",
+          "ingredient": "Broccoli Crowns",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "chicken-thighs-boneless",
+          "ingredient": "Chicken Thighs, Boneless",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "rice-noodles",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "bell-peppers-red",
+          "ingredient": "Bell Peppers, Red",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "soy-sauce",
+          "ingredient": "Soy Sauce",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "eggs-12-count",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "bread-whole-wheat",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "cereal-toasted-oats",
+          "ingredient": "Cereal, Toasted Oats",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "deli-turkey-slices",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "bread-white-sandwich",
+          "ingredient": "Bread, White Sandwich",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "crackers-wheat",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "notes": "Same menu as normal week, budget cut about 30% to $126. The agent must substitute down, cut non-essentials, or both; it may not simply exceed the cap.",
+      "preference_pairs": [
+        {
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+        },
+        {
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "context": "Reorder history prefers thighs over breast for stir-fry."
+        },
+        {
+          "preferred": "bread-sourdough",
+          "preferred_name": "Bread, Sourdough",
+          "over": "bread-white-sandwich",
+          "over_name": "Bread, White Sandwich",
+          "context": "Household rates sourdough higher for toast, when it is in the cart."
+        },
+        {
+          "preferred": "apples-honeycrisp",
+          "preferred_name": "Apples, Honeycrisp",
+          "over": "apples-gala",
+          "over_name": "Apples, Gala",
+          "context": "Kids' snack preference in the last two weeks, when both were offered."
+        },
+        {
+          "preferred": "ground-beef-90-10",
+          "preferred_name": "Ground Beef, 90/10",
+          "over": "ground-beef-80-20",
+          "over_name": "Ground Beef, 80/20",
+          "context": "Leaner ground beef preferred for tacos, price permitting."
+        },
+        {
+          "preferred": "milk-2",
+          "preferred_name": "Milk, 2%",
+          "over": "milk-whole",
+          "over_name": "Milk, Whole",
+          "context": "Usual milk reorder is 2%."
+        }
+      ],
+      "reorder_history": [
+        {
+          "catalog_id": "eggs-12-count",
+          "name": "Eggs, 12 Count",
+          "times_ordered": 8
+        },
+        {
+          "catalog_id": "milk-2",
+          "name": "Milk, 2%",
+          "times_ordered": 7
+        },
+        {
+          "catalog_id": "chicken-thighs-boneless",
+          "name": "Chicken Thighs, Boneless",
+          "times_ordered": 5
+        },
+        {
+          "catalog_id": "salsa-verde",
+          "name": "Salsa Verde",
+          "times_ordered": 3
+        }
+      ]
+    },
+    {
+      "format": "bitrecipes-agent-brief/v1",
+      "version": "v1",
+      "task_id": "pantry-first-week",
+      "title": "Pantry-first week",
+      "household_id": "bakeoff-household-v1",
+      "week_of": "2026-11-09",
+      "settings": {
+        "grocery_source": "Generic Grocery Pickup",
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+        "best_day": "Saturday",
+        "budget": 180,
+        "household_size": 4
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "text": "Roast chicken, potatoes, green beans",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Tuesday",
+          "text": "Spaghetti, meatballs, salad",
+          "servings": 4,
+          "picked_by": "Taylor",
+          "status": "ready"
+        },
+        {
+          "day": "Wednesday",
+          "text": "Tacos",
+          "servings": 4,
+          "picked_by": "Jamie",
+          "status": "ready"
+        },
+        {
+          "day": "Thursday",
+          "text": "Salmon, rice, broccoli",
+          "servings": 4,
+          "picked_by": "Alex",
+          "status": "ready"
+        },
+        {
+          "day": "Friday",
+          "text": "Chicken stir-fry, rice noodles, peppers",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        }
+      ],
+      "calls": {
+        "breakfast": {
+          "mode": "week",
+          "text": "Eggs, toast, cereal",
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "cereal-toasted-oats",
+              "name": "Cereal, Toasted Oats",
+              "qty": 1,
+              "unit": "box"
+            }
+          ]
+        },
+        "lunch": {
+          "mode": "week",
+          "text": "Turkey sandwiches, apples",
+          "ingredients": [
+            {
+              "catalog_id": "deli-turkey-slices",
+              "name": "Deli Turkey Slices",
+              "qty": 2,
+              "unit": "pack"
+            },
+            {
+              "catalog_id": "bread-white-sandwich",
+              "name": "Bread, White Sandwich",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 2,
+              "unit": "lb"
+            }
+          ]
+        },
+        "snacks": {
+          "mode": "week",
+          "text": "Apples, crackers, cheese",
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ]
+        }
+      },
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "spaghetti",
+          "name": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "jasmine-rice",
+          "name": "Jasmine Rice",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "chicken-broth",
+          "name": "Chicken Broth",
+          "qty": 2,
+          "unit": "carton"
+        },
+        {
+          "catalog_id": "canned-tomatoes-diced",
+          "name": "Canned Tomatoes, Diced",
+          "qty": 2,
+          "unit": "can"
+        }
+      ],
+      "leftovers": [],
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "type": "budget",
+          "text": "Cart total must stay within $180."
+        },
+        {
+          "id": "no-pork",
+          "type": "stated_household_constraint",
+          "text": "Household states it does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "forbids_tags": [
+            "pork"
+          ]
+        },
+        {
+          "id": "snack-cap",
+          "type": "budget",
+          "text": "At most $25 of the cart may be snack items (aisle pantry items tagged as snacks in the brief: crackers, popcorn, cookies).",
+          "max_spend": 25,
+          "applies_to_names": [
+            "Crackers, Wheat",
+            "Crackers, Saltine",
+            "Pretzels",
+            "Popcorn, Microwave",
+            "Cookies, Chocolate Chip",
+            "Cookies, Oatmeal"
+          ]
+        }
+      ],
+      "catalog_overrides": {},
+      "expected_lines": [
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "yukon-gold-potatoes",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "green-beans",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "meatballs-frozen-beef",
+          "ingredient": "Meatballs, Frozen Beef",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "marinara-sauce",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "romaine-lettuce",
+          "ingredient": "Romaine Lettuce",
+          "qty": 1,
+          "unit": "head"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "parmesan-grated",
+          "ingredient": "Parmesan, Grated",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1,
+          "unit": "tub"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "salmon-fillets",
+          "ingredient": "Salmon Fillets",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "broccoli-crowns",
+          "ingredient": "Broccoli Crowns",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "chicken-thighs-boneless",
+          "ingredient": "Chicken Thighs, Boneless",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "rice-noodles",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "bell-peppers-red",
+          "ingredient": "Bell Peppers, Red",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "soy-sauce",
+          "ingredient": "Soy Sauce",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "eggs-12-count",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "bread-whole-wheat",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "cereal-toasted-oats",
+          "ingredient": "Cereal, Toasted Oats",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "deli-turkey-slices",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "bread-white-sandwich",
+          "ingredient": "Bread, White Sandwich",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "crackers-wheat",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "notes": "Pantry is well stocked; use it first. Spaghetti and jasmine rice are already owned, so they are NOT in expected_lines. Re-buying a pantry-owned item is scored as waste.",
+      "preference_pairs": [
+        {
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+        },
+        {
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "context": "Reorder history prefers thighs over breast for stir-fry."
+        },
+        {
+          "preferred": "bread-sourdough",
+          "preferred_name": "Bread, Sourdough",
+          "over": "bread-white-sandwich",
+          "over_name": "Bread, White Sandwich",
+          "context": "Household rates sourdough higher for toast, when it is in the cart."
+        },
+        {
+          "preferred": "apples-honeycrisp",
+          "preferred_name": "Apples, Honeycrisp",
+          "over": "apples-gala",
+          "over_name": "Apples, Gala",
+          "context": "Kids' snack preference in the last two weeks, when both were offered."
+        },
+        {
+          "preferred": "ground-beef-90-10",
+          "preferred_name": "Ground Beef, 90/10",
+          "over": "ground-beef-80-20",
+          "over_name": "Ground Beef, 80/20",
+          "context": "Leaner ground beef preferred for tacos, price permitting."
+        },
+        {
+          "preferred": "milk-2",
+          "preferred_name": "Milk, 2%",
+          "over": "milk-whole",
+          "over_name": "Milk, Whole",
+          "context": "Usual milk reorder is 2%."
+        }
+      ],
+      "reorder_history": [
+        {
+          "catalog_id": "eggs-12-count",
+          "name": "Eggs, 12 Count",
+          "times_ordered": 8
+        },
+        {
+          "catalog_id": "milk-2",
+          "name": "Milk, 2%",
+          "times_ordered": 7
+        },
+        {
+          "catalog_id": "chicken-thighs-boneless",
+          "name": "Chicken Thighs, Boneless",
+          "times_ordered": 5
+        },
+        {
+          "catalog_id": "salsa-verde",
+          "name": "Salsa Verde",
+          "times_ordered": 3
+        }
+      ]
+    },
+    {
+      "format": "bitrecipes-agent-brief/v1",
+      "version": "v1",
+      "task_id": "leftover-week",
+      "title": "Leftover week",
+      "household_id": "bakeoff-household-v1",
+      "week_of": "2026-11-09",
+      "settings": {
+        "grocery_source": "Generic Grocery Pickup",
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+        "best_day": "Saturday",
+        "budget": 180,
+        "household_size": 4
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "text": "Roast chicken, potatoes, carrots",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Tuesday",
+          "text": "Chicken noodle soup (from leftover chicken)",
+          "servings": 4,
+          "picked_by": "Taylor",
+          "status": "ready"
+        },
+        {
+          "day": "Wednesday",
+          "text": "Tacos",
+          "servings": 4,
+          "picked_by": "Jamie",
+          "status": "ready"
+        },
+        {
+          "day": "Thursday",
+          "text": "Salmon, rice, broccoli",
+          "servings": 4,
+          "picked_by": "Alex",
+          "status": "ready"
+        },
+        {
+          "day": "Friday",
+          "text": "Chicken stir-fry, rice noodles, peppers",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        }
+      ],
+      "calls": {
+        "breakfast": {
+          "mode": "week",
+          "text": "Eggs, toast, cereal",
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "cereal-toasted-oats",
+              "name": "Cereal, Toasted Oats",
+              "qty": 1,
+              "unit": "box"
+            }
+          ]
+        },
+        "lunch": {
+          "mode": "week",
+          "text": "Turkey sandwiches, apples",
+          "ingredients": [
+            {
+              "catalog_id": "deli-turkey-slices",
+              "name": "Deli Turkey Slices",
+              "qty": 2,
+              "unit": "pack"
+            },
+            {
+              "catalog_id": "bread-white-sandwich",
+              "name": "Bread, White Sandwich",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 2,
+              "unit": "lb"
+            }
+          ]
+        },
+        "snacks": {
+          "mode": "week",
+          "text": "Apples, crackers, cheese",
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ]
+        }
+      },
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "leftovers": [
+        {
+          "from_day": "Monday",
+          "from_dish": "Roast chicken, potatoes, carrots",
+          "ingredient_catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "used_in_day": "Tuesday",
+          "used_in_dish": "Chicken noodle soup (from leftover chicken)",
+          "note": "Leftover roast chicken covers Tuesday's soup chicken; do not buy fresh chicken for Tuesday."
+        }
+      ],
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "type": "budget",
+          "text": "Cart total must stay within $180."
+        },
+        {
+          "id": "no-pork",
+          "type": "stated_household_constraint",
+          "text": "Household states it does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "forbids_tags": [
+            "pork"
+          ]
+        },
+        {
+          "id": "snack-cap",
+          "type": "budget",
+          "text": "At most $25 of the cart may be snack items (aisle pantry items tagged as snacks in the brief: crackers, popcorn, cookies).",
+          "max_spend": 25,
+          "applies_to_names": [
+            "Crackers, Wheat",
+            "Crackers, Saltine",
+            "Pretzels",
+            "Popcorn, Microwave",
+            "Cookies, Chocolate Chip",
+            "Cookies, Oatmeal"
+          ]
+        }
+      ],
+      "catalog_overrides": {},
+      "expected_lines": [
+        {
+          "dish": "Roast chicken, potatoes, carrots",
+          "day": "Monday",
+          "catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "dish": "Roast chicken, potatoes, carrots",
+          "day": "Monday",
+          "catalog_id": "yukon-gold-potatoes",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Roast chicken, potatoes, carrots",
+          "day": "Monday",
+          "catalog_id": "carrots",
+          "ingredient": "Carrots",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Chicken noodle soup (from leftover chicken)",
+          "day": "Tuesday",
+          "catalog_id": "egg-noodles",
+          "ingredient": "Egg Noodles",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Chicken noodle soup (from leftover chicken)",
+          "day": "Tuesday",
+          "catalog_id": "chicken-broth",
+          "ingredient": "Chicken Broth",
+          "qty": 1,
+          "unit": "carton"
+        },
+        {
+          "dish": "Chicken noodle soup (from leftover chicken)",
+          "day": "Tuesday",
+          "catalog_id": "celery",
+          "ingredient": "Celery",
+          "qty": 1,
+          "unit": "bunch"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1,
+          "unit": "tub"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "salmon-fillets",
+          "ingredient": "Salmon Fillets",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "jasmine-rice",
+          "ingredient": "Jasmine Rice",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "broccoli-crowns",
+          "ingredient": "Broccoli Crowns",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "chicken-thighs-boneless",
+          "ingredient": "Chicken Thighs, Boneless",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "rice-noodles",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "bell-peppers-red",
+          "ingredient": "Bell Peppers, Red",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "soy-sauce",
+          "ingredient": "Soy Sauce",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "eggs-12-count",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "bread-whole-wheat",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "cereal-toasted-oats",
+          "ingredient": "Cereal, Toasted Oats",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "deli-turkey-slices",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "bread-white-sandwich",
+          "ingredient": "Bread, White Sandwich",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "crackers-wheat",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "notes": "Day 2's dinner is built from Day 1's leftovers by design. Tuesday's expected_lines deliberately omit chicken. Buying fresh chicken for Tuesday is scored as waste.",
+      "preference_pairs": [
+        {
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+        },
+        {
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "context": "Reorder history prefers thighs over breast for stir-fry."
+        },
+        {
+          "preferred": "bread-sourdough",
+          "preferred_name": "Bread, Sourdough",
+          "over": "bread-white-sandwich",
+          "over_name": "Bread, White Sandwich",
+          "context": "Household rates sourdough higher for toast, when it is in the cart."
+        },
+        {
+          "preferred": "apples-honeycrisp",
+          "preferred_name": "Apples, Honeycrisp",
+          "over": "apples-gala",
+          "over_name": "Apples, Gala",
+          "context": "Kids' snack preference in the last two weeks, when both were offered."
+        },
+        {
+          "preferred": "ground-beef-90-10",
+          "preferred_name": "Ground Beef, 90/10",
+          "over": "ground-beef-80-20",
+          "over_name": "Ground Beef, 80/20",
+          "context": "Leaner ground beef preferred for tacos, price permitting."
+        },
+        {
+          "preferred": "milk-2",
+          "preferred_name": "Milk, 2%",
+          "over": "milk-whole",
+          "over_name": "Milk, Whole",
+          "context": "Usual milk reorder is 2%."
+        }
+      ],
+      "reorder_history": [
+        {
+          "catalog_id": "eggs-12-count",
+          "name": "Eggs, 12 Count",
+          "times_ordered": 8
+        },
+        {
+          "catalog_id": "milk-2",
+          "name": "Milk, 2%",
+          "times_ordered": 7
+        },
+        {
+          "catalog_id": "chicken-thighs-boneless",
+          "name": "Chicken Thighs, Boneless",
+          "times_ordered": 5
+        },
+        {
+          "catalog_id": "salsa-verde",
+          "name": "Salsa Verde",
+          "times_ordered": 3
+        }
+      ]
+    },
+    {
+      "format": "bitrecipes-agent-brief/v1",
+      "version": "v1",
+      "task_id": "party-week",
+      "title": "Party week",
+      "household_id": "bakeoff-household-v1",
+      "week_of": "2026-11-09",
+      "settings": {
+        "grocery_source": "Generic Grocery Pickup",
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+        "best_day": "Saturday",
+        "budget": 260,
+        "household_size": 6
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "text": "Roast chicken, potatoes, green beans",
+          "servings": 6,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Tuesday",
+          "text": "Spaghetti, meatballs, salad",
+          "servings": 6,
+          "picked_by": "Taylor",
+          "status": "ready"
+        },
+        {
+          "day": "Wednesday",
+          "text": "Tacos",
+          "servings": 6,
+          "picked_by": "Jamie",
+          "status": "ready"
+        },
+        {
+          "day": "Thursday",
+          "text": "Salmon, rice, broccoli",
+          "servings": 6,
+          "picked_by": "Alex",
+          "status": "ready"
+        },
+        {
+          "day": "Friday",
+          "text": "Chicken stir-fry, rice noodles, peppers",
+          "servings": 6,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Saturday",
+          "text": "Party tacos for guests",
+          "servings": 8,
+          "picked_by": "Jamie",
+          "status": "ready"
+        }
+      ],
+      "calls": {
+        "breakfast": {
+          "mode": "week",
+          "text": "Eggs, toast, cereal",
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "cereal-toasted-oats",
+              "name": "Cereal, Toasted Oats",
+              "qty": 1,
+              "unit": "box"
+            }
+          ]
+        },
+        "lunch": {
+          "mode": "week",
+          "text": "Turkey sandwiches, apples",
+          "ingredients": [
+            {
+              "catalog_id": "deli-turkey-slices",
+              "name": "Deli Turkey Slices",
+              "qty": 2,
+              "unit": "pack"
+            },
+            {
+              "catalog_id": "bread-white-sandwich",
+              "name": "Bread, White Sandwich",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 2,
+              "unit": "lb"
+            }
+          ]
+        },
+        "snacks": {
+          "mode": "week",
+          "text": "Apples, crackers, cheese",
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ]
+        }
+      },
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "leftovers": [],
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "type": "budget",
+          "text": "Cart total must stay within $260."
+        },
+        {
+          "id": "no-pork",
+          "type": "stated_household_constraint",
+          "text": "Household states it does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "forbids_tags": [
+            "pork"
+          ]
+        },
+        {
+          "id": "snack-cap",
+          "type": "budget",
+          "text": "At most $25 of the cart may be snack items (aisle pantry items tagged as snacks in the brief: crackers, popcorn, cookies).",
+          "max_spend": 25,
+          "applies_to_names": [
+            "Crackers, Wheat",
+            "Crackers, Saltine",
+            "Pretzels",
+            "Popcorn, Microwave",
+            "Cookies, Chocolate Chip",
+            "Cookies, Oatmeal"
+          ]
+        }
+      ],
+      "catalog_overrides": {},
+      "expected_lines": [
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "qty": 1.5,
+          "unit": "each"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "yukon-gold-potatoes",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 3.0,
+          "unit": "lb"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "green-beans",
+          "ingredient": "Green Beans",
+          "qty": 1.5,
+          "unit": "lb"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "spaghetti",
+          "ingredient": "Spaghetti",
+          "qty": 1.5,
+          "unit": "box"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "meatballs-frozen-beef",
+          "ingredient": "Meatballs, Frozen Beef",
+          "qty": 1.5,
+          "unit": "bag"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "marinara-sauce",
+          "ingredient": "Marinara Sauce",
+          "qty": 1.5,
+          "unit": "jar"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "romaine-lettuce",
+          "ingredient": "Romaine Lettuce",
+          "qty": 1.5,
+          "unit": "head"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "parmesan-grated",
+          "ingredient": "Parmesan, Grated",
+          "qty": 1.5,
+          "unit": "can"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1.5,
+          "unit": "lb"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1.5,
+          "unit": "pack"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1.5,
+          "unit": "bag"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 1.5,
+          "unit": "jar"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1.5,
+          "unit": "tub"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "salmon-fillets",
+          "ingredient": "Salmon Fillets",
+          "qty": 1.5,
+          "unit": "lb"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "jasmine-rice",
+          "ingredient": "Jasmine Rice",
+          "qty": 1.5,
+          "unit": "bag"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "broccoli-crowns",
+          "ingredient": "Broccoli Crowns",
+          "qty": 1.5,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "chicken-thighs-boneless",
+          "ingredient": "Chicken Thighs, Boneless",
+          "qty": 1.5,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "rice-noodles",
+          "ingredient": "Rice Noodles",
+          "qty": 1.5,
+          "unit": "pack"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "bell-peppers-red",
+          "ingredient": "Bell Peppers, Red",
+          "qty": 3.0,
+          "unit": "each"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "soy-sauce",
+          "ingredient": "Soy Sauce",
+          "qty": 1.5,
+          "unit": "bottle"
+        },
+        {
+          "dish": "Party tacos for guests",
+          "day": "Saturday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Party tacos for guests",
+          "day": "Saturday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Party tacos for guests",
+          "day": "Saturday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 2,
+          "unit": "bag"
+        },
+        {
+          "dish": "Party tacos for guests",
+          "day": "Saturday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 2,
+          "unit": "jar"
+        },
+        {
+          "dish": "Party tacos for guests",
+          "day": "Saturday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1,
+          "unit": "tub"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "eggs-12-count",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "bread-whole-wheat",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "cereal-toasted-oats",
+          "ingredient": "Cereal, Toasted Oats",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "deli-turkey-slices",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "bread-white-sandwich",
+          "ingredient": "Bread, White Sandwich",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "crackers-wheat",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "notes": "Household size jumps from 4 to 6, servings scale (quantities in expected_lines are scaled 1.5x), plus a Saturday party dinner for 8.",
+      "preference_pairs": [
+        {
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+        },
+        {
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "context": "Reorder history prefers thighs over breast for stir-fry."
+        },
+        {
+          "preferred": "bread-sourdough",
+          "preferred_name": "Bread, Sourdough",
+          "over": "bread-white-sandwich",
+          "over_name": "Bread, White Sandwich",
+          "context": "Household rates sourdough higher for toast, when it is in the cart."
+        },
+        {
+          "preferred": "apples-honeycrisp",
+          "preferred_name": "Apples, Honeycrisp",
+          "over": "apples-gala",
+          "over_name": "Apples, Gala",
+          "context": "Kids' snack preference in the last two weeks, when both were offered."
+        },
+        {
+          "preferred": "ground-beef-90-10",
+          "preferred_name": "Ground Beef, 90/10",
+          "over": "ground-beef-80-20",
+          "over_name": "Ground Beef, 80/20",
+          "context": "Leaner ground beef preferred for tacos, price permitting."
+        },
+        {
+          "preferred": "milk-2",
+          "preferred_name": "Milk, 2%",
+          "over": "milk-whole",
+          "over_name": "Milk, Whole",
+          "context": "Usual milk reorder is 2%."
+        }
+      ],
+      "reorder_history": [
+        {
+          "catalog_id": "eggs-12-count",
+          "name": "Eggs, 12 Count",
+          "times_ordered": 8
+        },
+        {
+          "catalog_id": "milk-2",
+          "name": "Milk, 2%",
+          "times_ordered": 7
+        },
+        {
+          "catalog_id": "chicken-thighs-boneless",
+          "name": "Chicken Thighs, Boneless",
+          "times_ordered": 5
+        },
+        {
+          "catalog_id": "salsa-verde",
+          "name": "Salsa Verde",
+          "times_ordered": 3
+        }
+      ]
+    },
+    {
+      "format": "bitrecipes-agent-brief/v1",
+      "version": "v1",
+      "task_id": "out-of-stock-week",
+      "title": "Out-of-stock week",
+      "household_id": "bakeoff-household-v1",
+      "week_of": "2026-11-09",
+      "settings": {
+        "grocery_source": "Generic Grocery Pickup",
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup",
+        "best_day": "Saturday",
+        "budget": 180,
+        "household_size": 4
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "text": "Roast chicken, potatoes, green beans",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        },
+        {
+          "day": "Tuesday",
+          "text": "Spaghetti, meatballs, salad",
+          "servings": 4,
+          "picked_by": "Taylor",
+          "status": "ready"
+        },
+        {
+          "day": "Wednesday",
+          "text": "Tacos",
+          "servings": 4,
+          "picked_by": "Jamie",
+          "status": "ready"
+        },
+        {
+          "day": "Thursday",
+          "text": "Salmon, rice, broccoli",
+          "servings": 4,
+          "picked_by": "Alex",
+          "status": "ready"
+        },
+        {
+          "day": "Friday",
+          "text": "Chicken stir-fry, rice noodles, peppers",
+          "servings": 4,
+          "picked_by": "Robin",
+          "status": "ready"
+        }
+      ],
+      "calls": {
+        "breakfast": {
+          "mode": "week",
+          "text": "Eggs, toast, cereal",
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "cereal-toasted-oats",
+              "name": "Cereal, Toasted Oats",
+              "qty": 1,
+              "unit": "box"
+            }
+          ]
+        },
+        "lunch": {
+          "mode": "week",
+          "text": "Turkey sandwiches, apples",
+          "ingredients": [
+            {
+              "catalog_id": "deli-turkey-slices",
+              "name": "Deli Turkey Slices",
+              "qty": 2,
+              "unit": "pack"
+            },
+            {
+              "catalog_id": "bread-white-sandwich",
+              "name": "Bread, White Sandwich",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 2,
+              "unit": "lb"
+            }
+          ]
+        },
+        "snacks": {
+          "mode": "week",
+          "text": "Apples, crackers, cheese",
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ]
+        }
+      },
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "leftovers": [],
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "type": "budget",
+          "text": "Cart total must stay within $180."
+        },
+        {
+          "id": "no-pork",
+          "type": "stated_household_constraint",
+          "text": "Household states it does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "forbids_tags": [
+            "pork"
+          ]
+        },
+        {
+          "id": "snack-cap",
+          "type": "budget",
+          "text": "At most $25 of the cart may be snack items (aisle pantry items tagged as snacks in the brief: crackers, popcorn, cookies).",
+          "max_spend": 25,
+          "applies_to_names": [
+            "Crackers, Wheat",
+            "Crackers, Saltine",
+            "Pretzels",
+            "Popcorn, Microwave",
+            "Cookies, Chocolate Chip",
+            "Cookies, Oatmeal"
+          ]
+        }
+      ],
+      "catalog_overrides": {
+        "in_stock": {
+          "salmon-fillets": false,
+          "ground-beef-80-20": false,
+          "romaine-lettuce": false
+        }
+      },
+      "expected_lines": [
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "whole-chicken",
+          "ingredient": "Whole Chicken",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "yukon-gold-potatoes",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Roast chicken, potatoes, green beans",
+          "day": "Monday",
+          "catalog_id": "green-beans",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "spaghetti",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "meatballs-frozen-beef",
+          "ingredient": "Meatballs, Frozen Beef",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "marinara-sauce",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "romaine-lettuce",
+          "ingredient": "Romaine Lettuce",
+          "qty": 1,
+          "unit": "head"
+        },
+        {
+          "dish": "Spaghetti, meatballs, salad",
+          "day": "Tuesday",
+          "catalog_id": "parmesan-grated",
+          "ingredient": "Parmesan, Grated",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "ground-beef-80-20",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "tortillas-flour",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "salsa-red",
+          "ingredient": "Salsa, Red",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "dish": "Tacos",
+          "day": "Wednesday",
+          "catalog_id": "sour-cream",
+          "ingredient": "Sour Cream",
+          "qty": 1,
+          "unit": "tub"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "salmon-fillets",
+          "ingredient": "Salmon Fillets",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "jasmine-rice",
+          "ingredient": "Jasmine Rice",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "dish": "Salmon, rice, broccoli",
+          "day": "Thursday",
+          "catalog_id": "broccoli-crowns",
+          "ingredient": "Broccoli Crowns",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "chicken-thighs-boneless",
+          "ingredient": "Chicken Thighs, Boneless",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "rice-noodles",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "bell-peppers-red",
+          "ingredient": "Bell Peppers, Red",
+          "qty": 2,
+          "unit": "each"
+        },
+        {
+          "dish": "Chicken stir-fry, rice noodles, peppers",
+          "day": "Friday",
+          "catalog_id": "soy-sauce",
+          "ingredient": "Soy Sauce",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "eggs-12-count",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "bread-whole-wheat",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Eggs, toast, cereal",
+          "day": "all-week",
+          "catalog_id": "cereal-toasted-oats",
+          "ingredient": "Cereal, Toasted Oats",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "deli-turkey-slices",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 2,
+          "unit": "pack"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "bread-white-sandwich",
+          "ingredient": "Bread, White Sandwich",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "dish": "Turkey sandwiches, apples",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 2,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "apples-gala",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "crackers-wheat",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "dish": "Apples, crackers, cheese",
+          "day": "all-week",
+          "catalog_id": "cheddar-cheese-shredded",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "notes": "Three named items are out of stock in this task's catalog slice, with plausible substitutes available in the catalog: Salmon Fillets -> Cod/Trout Fillets, Ground Beef 80/20 -> Ground Turkey / Ground Beef 90/10, Romaine Lettuce -> Butter Lettuce / Baby Spinach. Substitute with an explanation, or flag and omit. Never silently drop, never buy the out-of-stock item, never buy a wrong thing.",
+      "preference_pairs": [
+        {
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "context": "Household has picked salsa verde over red salsa in 3 of the last 4 taco weeks."
+        },
+        {
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "context": "Reorder history prefers thighs over breast for stir-fry."
+        },
+        {
+          "preferred": "bread-sourdough",
+          "preferred_name": "Bread, Sourdough",
+          "over": "bread-white-sandwich",
+          "over_name": "Bread, White Sandwich",
+          "context": "Household rates sourdough higher for toast, when it is in the cart."
+        },
+        {
+          "preferred": "apples-honeycrisp",
+          "preferred_name": "Apples, Honeycrisp",
+          "over": "apples-gala",
+          "over_name": "Apples, Gala",
+          "context": "Kids' snack preference in the last two weeks, when both were offered."
+        },
+        {
+          "preferred": "ground-beef-90-10",
+          "preferred_name": "Ground Beef, 90/10",
+          "over": "ground-beef-80-20",
+          "over_name": "Ground Beef, 80/20",
+          "context": "Leaner ground beef preferred for tacos, price permitting."
+        },
+        {
+          "preferred": "milk-2",
+          "preferred_name": "Milk, 2%",
+          "over": "milk-whole",
+          "over_name": "Milk, Whole",
+          "context": "Usual milk reorder is 2%."
+        }
+      ],
+      "reorder_history": [
+        {
+          "catalog_id": "eggs-12-count",
+          "name": "Eggs, 12 Count",
+          "times_ordered": 8
+        },
+        {
+          "catalog_id": "milk-2",
+          "name": "Milk, 2%",
+          "times_ordered": 7
+        },
+        {
+          "catalog_id": "chicken-thighs-boneless",
+          "name": "Chicken Thighs, Boneless",
+          "times_ordered": 5
+        },
+        {
+          "catalog_id": "salsa-verde",
+          "name": "Salsa Verde",
+          "times_ordered": 3
+        }
+      ]
+    }
+  ]
+}
