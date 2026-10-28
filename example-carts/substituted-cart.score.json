@@ -1,0 +1,112 @@
+{
+  "valid": true,
+  "scorer": "bitrecipes-bakeoff-scorer v1 (deterministic, no model calls)",
+  "task_id": "out-of-stock-week",
+  "catalog_version": "v1.0",
+  "hard_fail": false,
+  "hard_fails": [],
+  "completeness_accuracy": {
+    "score": 1,
+    "covered": 27,
+    "expected": 27,
+    "missing": [],
+    "overbought": [],
+    "unit_mismatches": [],
+    "extra_lines": 0
+  },
+  "stated_constraint_compliance": {
+    "budget": 180,
+    "cart_total": 118.87,
+    "over_budget": false,
+    "violations": []
+  },
+  "taste_preference_fit": {
+    "score": 1,
+    "wins": 1,
+    "losses": 0,
+    "neutral": 5,
+    "detail": [
+      {
+        "preferred": "salsa-verde",
+        "over": "salsa-red",
+        "outcome": "preferred_chosen"
+      },
+      {
+        "preferred": "chicken-thighs-boneless",
+        "over": "chicken-breast-boneless",
+        "outcome": "neutral"
+      },
+      {
+        "preferred": "bread-sourdough",
+        "over": "bread-white-sandwich",
+        "outcome": "neutral"
+      },
+      {
+        "preferred": "apples-honeycrisp",
+        "over": "apples-gala",
+        "outcome": "neutral"
+      },
+      {
+        "preferred": "ground-beef-90-10",
+        "over": "ground-beef-80-20",
+        "outcome": "neutral"
+      },
+      {
+        "preferred": "milk-2",
+        "over": "milk-whole",
+        "outcome": "neutral"
+      }
+    ]
+  },
+  "waste_pantry_leftover": {
+    "score": 1,
+    "pantry_rebuys": [],
+    "leftover_violations": []
+  },
+  "collaboration_approval": {
+    "substitutions": 4,
+    "unexplained_substitutions": [],
+    "questions_asked": 1,
+    "order_attempted": false,
+    "invented_availability": [],
+    "price_mismatches": []
+  },
+  "robustness_out_of_stock": {
+    "score": 1,
+    "out_of_stock_expected": [
+      "romaine-lettuce",
+      "ground-beef-80-20",
+      "salmon-fillets"
+    ],
+    "detail": [
+      {
+        "catalog_id": "romaine-lettuce",
+        "name": "Romaine Lettuce",
+        "status": "substituted_with_explanation"
+      },
+      {
+        "catalog_id": "ground-beef-80-20",
+        "name": "Ground Beef, 80/20",
+        "status": "substituted_with_explanation"
+      },
+      {
+        "catalog_id": "salmon-fillets",
+        "name": "Salmon Fillets",
+        "status": "substituted_with_explanation"
+      }
+    ],
+    "silent_drops": []
+  },
+  "efficiency_reported_not_scored": {
+    "time_seconds": 180,
+    "token_cost_estimate": "0.03 USD (illustrative)",
+    "steps": null,
+    "cart_lines": 27,
+    "model": "example-reference-agent (synthetic example, not a vendor submission)",
+    "tools": [
+      "catalog lookup",
+      "brief reader"
+    ]
+  },
+  "note": "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output."
+}
