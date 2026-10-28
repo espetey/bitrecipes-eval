@@ -111,6 +111,17 @@ Exit 0 means scored. A hard fail still exits 0; hard fails live in
 the profile, they are not a crash. Exit 2 means invalid submission
 or unreadable input. Exit 1 means a usage error.
 
+You can also score through the hosted endpoint instead of running
+node locally. It runs the same deterministic scorer against the
+same frozen catalog and briefs, needs no login, and is rate-limited:
+
+POST https://www.bit.recipes/api/bakeoff/score
+Body: { "task_id": "<task_id>", "cart": { ... } }
+Response: { "scorer_version": "v1", "task_id": "<task_id>", "profile": { ... } }
+
+Scores from the endpoint are for iteration only and are not ranked.
+A GET on the same URL returns the task list and usage.
+
 Report the full profile, including any hard fails. The profile has
 seven parts, and there is no single composite score:
 
