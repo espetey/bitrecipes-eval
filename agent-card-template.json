@@ -1,0 +1,1 @@
+{"cost_estimate_usd":0,"model":"e.g. claude-haiku-5-5","notes":"Anything the scorer should know: how the cart was produced, what was asked, what was assumed.","seed":0,"store_snapshot":"catalog-v1.json","time_taken_seconds":0,"token_estimate":0,"tools":["e.g. get_brief, submit_cart"]}
