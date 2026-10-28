@@ -1,0 +1,252 @@
+{
+  "task_id": "out-of-stock-week",
+  "agent_card": {
+    "model": "example-reference-agent (synthetic example, not a vendor submission)",
+    "tools": [
+      "catalog lookup",
+      "brief reader"
+    ],
+    "store_snapshot": "catalog-v1.0",
+    "seed": 1,
+    "time_seconds": 180,
+    "token_cost_estimate": "0.03 USD (illustrative)"
+  },
+  "lines": [
+    {
+      "dish": "Roast chicken, potatoes, green beans",
+      "ingredient": "Whole Chicken",
+      "product_id": "whole-chicken",
+      "qty": 1,
+      "unit": "each",
+      "price_snapshot": 9.99
+    },
+    {
+      "dish": "Roast chicken, potatoes, green beans",
+      "ingredient": "Yukon Gold Potatoes",
+      "product_id": "yukon-gold-potatoes",
+      "qty": 2,
+      "unit": "lb",
+      "price_snapshot": 1.49
+    },
+    {
+      "dish": "Roast chicken, potatoes, green beans",
+      "ingredient": "Green Beans",
+      "product_id": "green-beans",
+      "qty": 1,
+      "unit": "lb",
+      "price_snapshot": 2.29
+    },
+    {
+      "dish": "Spaghetti, meatballs, salad",
+      "ingredient": "Spaghetti",
+      "product_id": "spaghetti",
+      "qty": 1,
+      "unit": "box",
+      "price_snapshot": 1.49
+    },
+    {
+      "dish": "Spaghetti, meatballs, salad",
+      "ingredient": "Meatballs, Frozen Beef",
+      "product_id": "meatballs-frozen-beef",
+      "qty": 1,
+      "unit": "bag",
+      "price_snapshot": 6.49
+    },
+    {
+      "dish": "Spaghetti, meatballs, salad",
+      "ingredient": "Marinara Sauce",
+      "product_id": "marinara-sauce",
+      "qty": 1,
+      "unit": "jar",
+      "price_snapshot": 3.49
+    },
+    {
+      "dish": "Spaghetti, meatballs, salad",
+      "ingredient": "Butter Lettuce",
+      "product_id": "butter-lettuce",
+      "qty": 1,
+      "unit": "head",
+      "price_snapshot": 2.49,
+      "substitution_of": "romaine-lettuce",
+      "reason": "Romaine was out of stock; butter lettuce is a listed substitute."
+    },
+    {
+      "dish": "Spaghetti, meatballs, salad",
+      "ingredient": "Parmesan, Grated",
+      "product_id": "parmesan-grated",
+      "qty": 1,
+      "unit": "can",
+      "price_snapshot": 4.29
+    },
+    {
+      "dish": "Tacos",
+      "ingredient": "Ground Turkey",
+      "product_id": "ground-turkey",
+      "qty": 1,
+      "unit": "lb",
+      "price_snapshot": 4.99,
+      "substitution_of": "ground-beef-80-20",
+      "reason": "Ground beef was out of stock; ground turkey is a listed substitute."
+    },
+    {
+      "dish": "Tacos",
+      "ingredient": "Tortillas, Flour",
+      "product_id": "tortillas-flour",
+      "qty": 1,
+      "unit": "pack",
+      "price_snapshot": 3.29
+    },
+    {
+      "dish": "Tacos",
+      "ingredient": "Cheddar Cheese, Shredded",
+      "product_id": "cheddar-cheese-shredded",
+      "qty": 2,
+      "unit": "bag",
+      "price_snapshot": 3.99
+    },
+    {
+      "dish": "Tacos",
+      "ingredient": "Salsa Verde",
+      "product_id": "salsa-verde",
+      "qty": 1,
+      "unit": "jar",
+      "price_snapshot": 3.49,
+      "substitution_of": "salsa-red",
+      "reason": "Household history prefers salsa verde over red salsa."
+    },
+    {
+      "dish": "Tacos",
+      "ingredient": "Sour Cream",
+      "product_id": "sour-cream",
+      "qty": 1,
+      "unit": "tub",
+      "price_snapshot": 2.49
+    },
+    {
+      "dish": "Salmon, rice, broccoli",
+      "ingredient": "Cod Fillets",
+      "product_id": "cod-fillets",
+      "qty": 1,
+      "unit": "lb",
+      "price_snapshot": 10.99,
+      "substitution_of": "salmon-fillets",
+      "reason": "Salmon was out of stock; cod is a listed substitute with a similar fillet."
+    },
+    {
+      "dish": "Salmon, rice, broccoli",
+      "ingredient": "Jasmine Rice",
+      "product_id": "jasmine-rice",
+      "qty": 1,
+      "unit": "bag",
+      "price_snapshot": 4.49
+    },
+    {
+      "dish": "Salmon, rice, broccoli",
+      "ingredient": "Broccoli Crowns",
+      "product_id": "broccoli-crowns",
+      "qty": 1,
+      "unit": "lb",
+      "price_snapshot": 1.99
+    },
+    {
+      "dish": "Chicken stir-fry, rice noodles, peppers",
+      "ingredient": "Chicken Thighs, Boneless",
+      "product_id": "chicken-thighs-boneless",
+      "qty": 1,
+      "unit": "lb",
+      "price_snapshot": 3.49
+    },
+    {
+      "dish": "Chicken stir-fry, rice noodles, peppers",
+      "ingredient": "Rice Noodles",
+      "product_id": "rice-noodles",
+      "qty": 1,
+      "unit": "pack",
+      "price_snapshot": 2.99
+    },
+    {
+      "dish": "Chicken stir-fry, rice noodles, peppers",
+      "ingredient": "Bell Peppers, Red",
+      "product_id": "bell-peppers-red",
+      "qty": 2,
+      "unit": "each",
+      "price_snapshot": 1.79
+    },
+    {
+      "dish": "Chicken stir-fry, rice noodles, peppers",
+      "ingredient": "Soy Sauce",
+      "product_id": "soy-sauce",
+      "qty": 1,
+      "unit": "bottle",
+      "price_snapshot": 3.49
+    },
+    {
+      "dish": "Eggs, toast, cereal",
+      "ingredient": "Eggs, 12 Count",
+      "product_id": "eggs-12-count",
+      "qty": 1,
+      "unit": "dozen",
+      "price_snapshot": 3.49
+    },
+    {
+      "dish": "Eggs, toast, cereal",
+      "ingredient": "Bread, Whole Wheat",
+      "product_id": "bread-whole-wheat",
+      "qty": 1,
+      "unit": "loaf",
+      "price_snapshot": 3.49
+    },
+    {
+      "dish": "Eggs, toast, cereal",
+      "ingredient": "Cereal, Toasted Oats",
+      "product_id": "cereal-toasted-oats",
+      "qty": 1,
+      "unit": "box",
+      "price_snapshot": 4.29
+    },
+    {
+      "dish": "Turkey sandwiches, apples",
+      "ingredient": "Deli Turkey Slices",
+      "product_id": "deli-turkey-slices",
+      "qty": 2,
+      "unit": "pack",
+      "price_snapshot": 4.49
+    },
+    {
+      "dish": "Turkey sandwiches, apples",
+      "ingredient": "Bread, White Sandwich",
+      "product_id": "bread-white-sandwich",
+      "qty": 1,
+      "unit": "loaf",
+      "price_snapshot": 2.99
+    },
+    {
+      "dish": "Turkey sandwiches, apples",
+      "ingredient": "Apples, Gala",
+      "product_id": "apples-gala",
+      "qty": 3,
+      "unit": "lb",
+      "price_snapshot": 1.79
+    },
+    {
+      "dish": "Apples, crackers, cheese",
+      "ingredient": "Crackers, Wheat",
+      "product_id": "crackers-wheat",
+      "qty": 1,
+      "unit": "box",
+      "price_snapshot": 3.49
+    }
+  ],
+  "questions": [
+    "Salmon was out of stock; I substituted cod \u2014 is that acceptable, or would you rather drop the fish course?"
+  ],
+  "explanations": [
+    "All three out-of-stock items were substituted with listed substitutes, each with a reason on the line."
+  ],
+  "constraints_checked": [
+    "budget",
+    "no-pork",
+    "snack-cap"
+  ],
+  "order_attempted": false
+}
