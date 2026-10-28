@@ -1,0 +1,3757 @@
+{
+  "version": "v1.0",
+  "frozen": true,
+  "note": "Synthetic catalog for the Bit.recipes Bake-Off Run 1. Invented prices and items; no real store, no scraped data, no real product data.",
+  "items": [
+    {
+      "id": "roma-tomatoes",
+      "name": "Roma Tomatoes",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.89,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "beefsteak-tomatoes",
+        "cherry-tomatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "beefsteak-tomatoes",
+      "name": "Beefsteak Tomatoes",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 2.19,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "roma-tomatoes",
+        "cherry-tomatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cherry-tomatoes",
+      "name": "Cherry Tomatoes",
+      "aisle": "produce",
+      "unit": "box",
+      "price": 3.49,
+      "pack_size": "10 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "roma-tomatoes",
+        "beefsteak-tomatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "yellow-onions",
+      "name": "Yellow Onions",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.29,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "red-onions",
+        "sweet-onions"
+      ],
+      "tags": []
+    },
+    {
+      "id": "red-onions",
+      "name": "Red Onions",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.59,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "yellow-onions",
+        "sweet-onions"
+      ],
+      "tags": []
+    },
+    {
+      "id": "sweet-onions",
+      "name": "Sweet Onions",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.79,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "yellow-onions",
+        "red-onions"
+      ],
+      "tags": []
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "aisle": "produce",
+      "unit": "head",
+      "price": 0.89,
+      "pack_size": "1 head",
+      "in_stock": true,
+      "substitutes": [
+        "garlic-pre-peeled"
+      ],
+      "tags": []
+    },
+    {
+      "id": "garlic-pre-peeled",
+      "name": "Garlic, pre-peeled",
+      "aisle": "produce",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "6 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "garlic"
+      ],
+      "tags": []
+    },
+    {
+      "id": "ginger-root",
+      "name": "Ginger Root",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 3.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    },
+    {
+      "id": "romaine-lettuce",
+      "name": "Romaine Lettuce",
+      "aisle": "produce",
+      "unit": "head",
+      "price": 1.99,
+      "pack_size": "1 head",
+      "in_stock": true,
+      "substitutes": [
+        "butter-lettuce",
+        "baby-spinach",
+        "green-leaf-lettuce"
+      ],
+      "tags": []
+    },
+    {
+      "id": "butter-lettuce",
+      "name": "Butter Lettuce",
+      "aisle": "produce",
+      "unit": "head",
+      "price": 2.49,
+      "pack_size": "1 head",
+      "in_stock": true,
+      "substitutes": [
+        "romaine-lettuce",
+        "baby-spinach",
+        "green-leaf-lettuce"
+      ],
+      "tags": []
+    },
+    {
+      "id": "baby-spinach",
+      "name": "Baby Spinach",
+      "aisle": "produce",
+      "unit": "bag",
+      "price": 3.29,
+      "pack_size": "5 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "romaine-lettuce",
+        "butter-lettuce",
+        "green-leaf-lettuce"
+      ],
+      "tags": []
+    },
+    {
+      "id": "green-leaf-lettuce",
+      "name": "Green Leaf Lettuce",
+      "aisle": "produce",
+      "unit": "head",
+      "price": 1.89,
+      "pack_size": "1 head",
+      "in_stock": true,
+      "substitutes": [
+        "romaine-lettuce",
+        "butter-lettuce",
+        "baby-spinach"
+      ],
+      "tags": []
+    },
+    {
+      "id": "broccoli-crowns",
+      "name": "Broccoli Crowns",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "broccoli-florets",
+        "cauliflower"
+      ],
+      "tags": []
+    },
+    {
+      "id": "broccoli-florets",
+      "name": "Broccoli Florets",
+      "aisle": "produce",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "broccoli-crowns",
+        "cauliflower"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "aisle": "produce",
+      "unit": "head",
+      "price": 3.29,
+      "pack_size": "1 head",
+      "in_stock": true,
+      "substitutes": [
+        "broccoli-crowns",
+        "broccoli-florets"
+      ],
+      "tags": []
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "aisle": "produce",
+      "unit": "bag",
+      "price": 1.49,
+      "pack_size": "2 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "baby-carrots"
+      ],
+      "tags": []
+    },
+    {
+      "id": "baby-carrots",
+      "name": "Baby Carrots",
+      "aisle": "produce",
+      "unit": "bag",
+      "price": 2.19,
+      "pack_size": "1 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "carrots"
+      ],
+      "tags": []
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "aisle": "produce",
+      "unit": "bunch",
+      "price": 1.79,
+      "pack_size": "1 bunch",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    },
+    {
+      "id": "green-beans",
+      "name": "Green Beans",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 2.29,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "snap-peas"
+      ],
+      "tags": []
+    },
+    {
+      "id": "snap-peas",
+      "name": "Snap Peas",
+      "aisle": "produce",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "8 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "green-beans"
+      ],
+      "tags": []
+    },
+    {
+      "id": "bell-peppers-green",
+      "name": "Bell Peppers, Green",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 1.29,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "bell-peppers-red",
+        "bell-peppers-yellow",
+        "jalape\u00f1o-peppers"
+      ],
+      "tags": []
+    },
+    {
+      "id": "bell-peppers-red",
+      "name": "Bell Peppers, Red",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 1.79,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "bell-peppers-green",
+        "bell-peppers-yellow",
+        "jalape\u00f1o-peppers"
+      ],
+      "tags": []
+    },
+    {
+      "id": "bell-peppers-yellow",
+      "name": "Bell Peppers, Yellow",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 1.79,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "bell-peppers-green",
+        "bell-peppers-red",
+        "jalape\u00f1o-peppers"
+      ],
+      "tags": []
+    },
+    {
+      "id": "jalape\u00f1o-peppers",
+      "name": "Jalape\u00f1o Peppers",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "bell-peppers-green",
+        "bell-peppers-red",
+        "bell-peppers-yellow"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cucumbers",
+      "name": "Cucumbers",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 0.99,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "yellow-squash"
+      ],
+      "tags": []
+    },
+    {
+      "id": "yellow-squash",
+      "name": "Yellow Squash",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "zucchini"
+      ],
+      "tags": []
+    },
+    {
+      "id": "russet-potatoes",
+      "name": "Russet Potatoes",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 0.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "yukon-gold-potatoes",
+        "red-potatoes",
+        "sweet-potatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "yukon-gold-potatoes",
+      "name": "Yukon Gold Potatoes",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "russet-potatoes",
+        "red-potatoes",
+        "sweet-potatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "red-potatoes",
+      "name": "Red Potatoes",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "russet-potatoes",
+        "yukon-gold-potatoes",
+        "sweet-potatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "sweet-potatoes",
+      "name": "Sweet Potatoes",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.29,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "russet-potatoes",
+        "yukon-gold-potatoes",
+        "red-potatoes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "bananas",
+      "name": "Bananas",
+      "aisle": "produce",
+      "unit": "bunch",
+      "price": 0.79,
+      "pack_size": "1 bunch",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    },
+    {
+      "id": "apples-gala",
+      "name": "Apples, Gala",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.79,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "apples-honeycrisp",
+        "apples-granny-smith"
+      ],
+      "tags": []
+    },
+    {
+      "id": "apples-honeycrisp",
+      "name": "Apples, Honeycrisp",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 2.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "apples-gala",
+        "apples-granny-smith"
+      ],
+      "tags": []
+    },
+    {
+      "id": "apples-granny-smith",
+      "name": "Apples, Granny Smith",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 1.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "apples-gala",
+        "apples-honeycrisp"
+      ],
+      "tags": []
+    },
+    {
+      "id": "lemons",
+      "name": "Lemons",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 0.79,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "limes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "limes",
+      "name": "Limes",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 0.59,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "lemons"
+      ],
+      "tags": []
+    },
+    {
+      "id": "avocados",
+      "name": "Avocados",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 1.29,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    },
+    {
+      "id": "mushrooms-white",
+      "name": "Mushrooms, White",
+      "aisle": "produce",
+      "unit": "box",
+      "price": 2.49,
+      "pack_size": "8 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "mushrooms-cremini"
+      ],
+      "tags": []
+    },
+    {
+      "id": "mushrooms-cremini",
+      "name": "Mushrooms, Cremini",
+      "aisle": "produce",
+      "unit": "box",
+      "price": 2.99,
+      "pack_size": "8 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "mushrooms-white"
+      ],
+      "tags": []
+    },
+    {
+      "id": "corn-on-the-cob",
+      "name": "Corn on the Cob",
+      "aisle": "produce",
+      "unit": "each",
+      "price": 0.69,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "corn-frozen-kernels"
+      ],
+      "tags": []
+    },
+    {
+      "id": "corn-frozen-kernels",
+      "name": "Corn, frozen kernels",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.19,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "corn-on-the-cob"
+      ],
+      "tags": []
+    },
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "aisle": "produce",
+      "unit": "bunch",
+      "price": 2.99,
+      "pack_size": "1 bunch",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    },
+    {
+      "id": "green-cabbage",
+      "name": "Green Cabbage",
+      "aisle": "produce",
+      "unit": "head",
+      "price": 1.19,
+      "pack_size": "1 head",
+      "in_stock": true,
+      "substitutes": [
+        "brussels-sprouts"
+      ],
+      "tags": []
+    },
+    {
+      "id": "brussels-sprouts",
+      "name": "Brussels Sprouts",
+      "aisle": "produce",
+      "unit": "lb",
+      "price": 2.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "green-cabbage"
+      ],
+      "tags": []
+    },
+    {
+      "id": "fresh-basil",
+      "name": "Fresh Basil",
+      "aisle": "produce",
+      "unit": "bunch",
+      "price": 2.49,
+      "pack_size": "1 bunch",
+      "in_stock": true,
+      "substitutes": [
+        "fresh-cilantro",
+        "fresh-parsley"
+      ],
+      "tags": []
+    },
+    {
+      "id": "fresh-cilantro",
+      "name": "Fresh Cilantro",
+      "aisle": "produce",
+      "unit": "bunch",
+      "price": 0.99,
+      "pack_size": "1 bunch",
+      "in_stock": true,
+      "substitutes": [
+        "fresh-basil",
+        "fresh-parsley"
+      ],
+      "tags": []
+    },
+    {
+      "id": "fresh-parsley",
+      "name": "Fresh Parsley",
+      "aisle": "produce",
+      "unit": "bunch",
+      "price": 0.99,
+      "pack_size": "1 bunch",
+      "in_stock": true,
+      "substitutes": [
+        "fresh-basil",
+        "fresh-cilantro"
+      ],
+      "tags": []
+    },
+    {
+      "id": "strawberries",
+      "name": "Strawberries",
+      "aisle": "produce",
+      "unit": "box",
+      "price": 3.99,
+      "pack_size": "1 lb box",
+      "in_stock": true,
+      "substitutes": [
+        "blueberries",
+        "raspberries",
+        "berries-mixed-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "blueberries",
+      "name": "Blueberries",
+      "aisle": "produce",
+      "unit": "box",
+      "price": 4.49,
+      "pack_size": "6 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "strawberries",
+        "raspberries",
+        "berries-mixed-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "raspberries",
+      "name": "Raspberries",
+      "aisle": "produce",
+      "unit": "box",
+      "price": 4.99,
+      "pack_size": "6 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "strawberries",
+        "blueberries",
+        "berries-mixed-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "chicken-breast-boneless",
+      "name": "Chicken Breast, Boneless",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 4.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-thighs-boneless",
+        "chicken-tenders",
+        "whole-chicken"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "chicken-thighs-boneless",
+      "name": "Chicken Thighs, Boneless",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 3.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-breast-boneless",
+        "chicken-tenders",
+        "whole-chicken"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "chicken-tenders",
+      "name": "Chicken Tenders",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 4.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-breast-boneless",
+        "chicken-thighs-boneless",
+        "whole-chicken"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "whole-chicken",
+      "name": "Whole Chicken",
+      "aisle": "meat/seafood",
+      "unit": "each",
+      "price": 9.99,
+      "pack_size": "4 lb each",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-breast-boneless",
+        "chicken-thighs-boneless",
+        "chicken-tenders"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "rotisserie-chicken",
+      "name": "Rotisserie Chicken",
+      "aisle": "meat/seafood",
+      "unit": "each",
+      "price": 7.99,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-breast-boneless",
+        "chicken-thighs-boneless",
+        "chicken-tenders"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "ground-beef-80-20",
+      "name": "Ground Beef, 80/20",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 5.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "ground-beef-90-10",
+        "ground-turkey"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "ground-beef-90-10",
+      "name": "Ground Beef, 90/10",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 6.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "ground-beef-80-20",
+        "ground-turkey"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "ground-turkey",
+      "name": "Ground Turkey",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 4.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "ground-beef-80-20",
+        "ground-beef-90-10"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "beef-sirloin-steak",
+      "name": "Beef Sirloin Steak",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 11.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "beef-ribeye-steak",
+        "beef-jerky"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "beef-ribeye-steak",
+      "name": "Beef Ribeye Steak",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 16.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "beef-sirloin-steak",
+        "beef-jerky"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "pork-chops-bone-in",
+      "name": "Pork Chops, Bone-In",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 4.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "pork-tenderloin",
+        "bacon",
+        "pork-sausages"
+      ],
+      "tags": [
+        "meat",
+        "pork"
+      ]
+    },
+    {
+      "id": "pork-tenderloin",
+      "name": "Pork Tenderloin",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 5.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "pork-chops-bone-in",
+        "bacon",
+        "pork-sausages"
+      ],
+      "tags": [
+        "meat",
+        "pork"
+      ]
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "aisle": "meat/seafood",
+      "unit": "pack",
+      "price": 6.99,
+      "pack_size": "12 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "pork-chops-bone-in",
+        "pork-tenderloin",
+        "pork-sausages"
+      ],
+      "tags": [
+        "meat",
+        "pork"
+      ]
+    },
+    {
+      "id": "pork-sausages",
+      "name": "Pork Sausages",
+      "aisle": "meat/seafood",
+      "unit": "pack",
+      "price": 5.49,
+      "pack_size": "12 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "pork-chops-bone-in",
+        "pork-tenderloin",
+        "bacon"
+      ],
+      "tags": [
+        "meat",
+        "pork"
+      ]
+    },
+    {
+      "id": "italian-sausage-mild",
+      "name": "Italian Sausage, Mild",
+      "aisle": "meat/seafood",
+      "unit": "pack",
+      "price": 5.99,
+      "pack_size": "16 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "pork-chops-bone-in",
+        "pork-tenderloin",
+        "bacon"
+      ],
+      "tags": [
+        "meat",
+        "pork"
+      ]
+    },
+    {
+      "id": "salmon-fillets",
+      "name": "Salmon Fillets",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 12.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "cod-fillets",
+        "trout-fillets",
+        "salmon-canned"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "cod-fillets",
+      "name": "Cod Fillets",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 10.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "salmon-fillets",
+        "trout-fillets",
+        "salmon-canned"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "trout-fillets",
+      "name": "Trout Fillets",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 11.49,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "salmon-fillets",
+        "cod-fillets",
+        "salmon-canned"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "shrimp-peeled",
+      "name": "Shrimp, Peeled",
+      "aisle": "meat/seafood",
+      "unit": "bag",
+      "price": 9.99,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "tilapia-fillets",
+        "tuna-canned",
+        "anchovy-paste"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "tilapia-fillets",
+      "name": "Tilapia Fillets",
+      "aisle": "meat/seafood",
+      "unit": "lb",
+      "price": 8.99,
+      "pack_size": "1 lb",
+      "in_stock": true,
+      "substitutes": [
+        "shrimp-peeled",
+        "tuna-canned",
+        "anchovy-paste"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "deli-turkey-slices",
+      "name": "Deli Turkey Slices",
+      "aisle": "meat/seafood",
+      "unit": "pack",
+      "price": 4.49,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "deli-ham-slices",
+        "deli-chicken-slices"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "deli-ham-slices",
+      "name": "Deli Ham Slices",
+      "aisle": "meat/seafood",
+      "unit": "pack",
+      "price": 4.29,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "deli-turkey-slices",
+        "deli-chicken-slices"
+      ],
+      "tags": [
+        "meat",
+        "pork"
+      ]
+    },
+    {
+      "id": "deli-chicken-slices",
+      "name": "Deli Chicken Slices",
+      "aisle": "meat/seafood",
+      "unit": "pack",
+      "price": 4.49,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "deli-turkey-slices",
+        "deli-ham-slices"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "meatballs-frozen-beef",
+      "name": "Meatballs, Frozen Beef",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 6.49,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "meatballs-frozen-turkey"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "meatballs-frozen-turkey",
+      "name": "Meatballs, Frozen Turkey",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 6.99,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "meatballs-frozen-beef"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "tofu-firm",
+      "name": "Tofu, Firm",
+      "aisle": "produce",
+      "unit": "pack",
+      "price": 2.49,
+      "pack_size": "14 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "tofu-extra-firm",
+        "tempeh"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tofu-extra-firm",
+      "name": "Tofu, Extra Firm",
+      "aisle": "produce",
+      "unit": "pack",
+      "price": 2.49,
+      "pack_size": "14 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "tofu-firm",
+        "tempeh"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tempeh",
+      "name": "Tempeh",
+      "aisle": "produce",
+      "unit": "pack",
+      "price": 3.99,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "tofu-firm",
+        "tofu-extra-firm"
+      ],
+      "tags": []
+    },
+    {
+      "id": "salmon-canned",
+      "name": "Salmon, Canned",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 4.99,
+      "pack_size": "6 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "salmon-fillets",
+        "cod-fillets",
+        "trout-fillets"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "tuna-canned",
+      "name": "Tuna, Canned",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.99,
+      "pack_size": "5 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "shrimp-peeled",
+        "tilapia-fillets",
+        "anchovy-paste"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "anchovy-paste",
+      "name": "Anchovy Paste",
+      "aisle": "pantry",
+      "unit": "tube",
+      "price": 3.49,
+      "pack_size": "2 oz tube",
+      "in_stock": true,
+      "substitutes": [
+        "shrimp-peeled",
+        "tilapia-fillets",
+        "tuna-canned"
+      ],
+      "tags": [
+        "meat",
+        "fish"
+      ]
+    },
+    {
+      "id": "beef-jerky",
+      "name": "Beef Jerky",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 6.99,
+      "pack_size": "3 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "beef-sirloin-steak",
+        "beef-ribeye-steak"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "milk-whole",
+      "name": "Milk, Whole",
+      "aisle": "dairy",
+      "unit": "gallon",
+      "price": 4.29,
+      "pack_size": "1 gallon",
+      "in_stock": true,
+      "substitutes": [
+        "milk-2",
+        "milk-skim",
+        "oat-milk"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "milk-2",
+      "name": "Milk, 2%",
+      "aisle": "dairy",
+      "unit": "gallon",
+      "price": 3.99,
+      "pack_size": "1 gallon",
+      "in_stock": true,
+      "substitutes": [
+        "milk-whole",
+        "milk-skim",
+        "oat-milk"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "milk-skim",
+      "name": "Milk, Skim",
+      "aisle": "dairy",
+      "unit": "gallon",
+      "price": 3.99,
+      "pack_size": "1 gallon",
+      "in_stock": true,
+      "substitutes": [
+        "milk-whole",
+        "milk-2",
+        "oat-milk"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "oat-milk",
+      "name": "Oat Milk",
+      "aisle": "dairy",
+      "unit": "carton",
+      "price": 3.99,
+      "pack_size": "64 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "milk-whole",
+        "milk-2",
+        "milk-skim"
+      ],
+      "tags": []
+    },
+    {
+      "id": "eggs-12-count",
+      "name": "Eggs, 12 Count",
+      "aisle": "dairy",
+      "unit": "dozen",
+      "price": 3.49,
+      "pack_size": "12 count",
+      "in_stock": true,
+      "substitutes": [
+        "eggs-18-count"
+      ],
+      "tags": []
+    },
+    {
+      "id": "eggs-18-count",
+      "name": "Eggs, 18 Count",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.99,
+      "pack_size": "18 count",
+      "in_stock": true,
+      "substitutes": [
+        "eggs-12-count"
+      ],
+      "tags": []
+    },
+    {
+      "id": "butter-salted",
+      "name": "Butter, Salted",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.99,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "butter-unsalted"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "butter-unsalted",
+      "name": "Butter, Unsalted",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.99,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "butter-salted"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "cheddar-cheese-shredded",
+      "name": "Cheddar Cheese, Shredded",
+      "aisle": "dairy",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "8 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "cheddar-cheese-block",
+        "mozzarella-shredded",
+        "swiss-cheese-sliced"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "cheddar-cheese-block",
+      "name": "Cheddar Cheese, Block",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.49,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "cheddar-cheese-shredded",
+        "mozzarella-shredded",
+        "swiss-cheese-sliced"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "mozzarella-shredded",
+      "name": "Mozzarella, Shredded",
+      "aisle": "dairy",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "8 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "cheddar-cheese-shredded",
+        "cheddar-cheese-block",
+        "swiss-cheese-sliced"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "parmesan-grated",
+      "name": "Parmesan, Grated",
+      "aisle": "dairy",
+      "unit": "can",
+      "price": 4.29,
+      "pack_size": "8 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "parmesan-wedge"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "parmesan-wedge",
+      "name": "Parmesan, Wedge",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 5.99,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "parmesan-grated"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "cream-cheese",
+      "name": "Cream Cheese",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "sour-cream",
+      "name": "Sour Cream",
+      "aisle": "dairy",
+      "unit": "tub",
+      "price": 2.49,
+      "pack_size": "16 oz tub",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "greek-yogurt-plain",
+      "name": "Greek Yogurt, Plain",
+      "aisle": "dairy",
+      "unit": "tub",
+      "price": 4.49,
+      "pack_size": "32 oz tub",
+      "in_stock": true,
+      "substitutes": [
+        "yogurt-vanilla",
+        "cottage-cheese"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "yogurt-vanilla",
+      "name": "Yogurt, Vanilla",
+      "aisle": "dairy",
+      "unit": "tub",
+      "price": 3.99,
+      "pack_size": "32 oz tub",
+      "in_stock": true,
+      "substitutes": [
+        "greek-yogurt-plain",
+        "cottage-cheese"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "heavy-cream",
+      "name": "Heavy Cream",
+      "aisle": "dairy",
+      "unit": "carton",
+      "price": 3.49,
+      "pack_size": "16 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "half-and-half",
+        "whipped-topping"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "half-and-half",
+      "name": "Half and Half",
+      "aisle": "dairy",
+      "unit": "carton",
+      "price": 2.99,
+      "pack_size": "16 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "heavy-cream",
+        "whipped-topping"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "cottage-cheese",
+      "name": "Cottage Cheese",
+      "aisle": "dairy",
+      "unit": "tub",
+      "price": 3.29,
+      "pack_size": "16 oz tub",
+      "in_stock": true,
+      "substitutes": [
+        "greek-yogurt-plain",
+        "yogurt-vanilla"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "swiss-cheese-sliced",
+      "name": "Swiss Cheese, Sliced",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.29,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "cheddar-cheese-shredded",
+        "cheddar-cheese-block",
+        "mozzarella-shredded"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "pepper-jack-sliced",
+      "name": "Pepper Jack, Sliced",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.29,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "cheddar-cheese-shredded",
+        "cheddar-cheese-block",
+        "mozzarella-shredded"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "feta-cheese",
+      "name": "Feta Cheese",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 3.99,
+      "pack_size": "6 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "goat-cheese"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "goat-cheese",
+      "name": "Goat Cheese",
+      "aisle": "dairy",
+      "unit": "pack",
+      "price": 4.49,
+      "pack_size": "4 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "feta-cheese"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "ice-cream-vanilla",
+      "name": "Ice Cream, Vanilla",
+      "aisle": "frozen",
+      "unit": "tub",
+      "price": 5.99,
+      "pack_size": "48 oz tub",
+      "in_stock": true,
+      "substitutes": [
+        "ice-cream-chocolate",
+        "ice-pops",
+        "frozen-yogurt-bars"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "ice-cream-chocolate",
+      "name": "Ice Cream, Chocolate",
+      "aisle": "frozen",
+      "unit": "tub",
+      "price": 5.99,
+      "pack_size": "48 oz tub",
+      "in_stock": true,
+      "substitutes": [
+        "ice-cream-vanilla",
+        "ice-pops",
+        "frozen-yogurt-bars"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "whipped-topping",
+      "name": "Whipped Topping",
+      "aisle": "frozen",
+      "unit": "tub",
+      "price": 2.99,
+      "pack_size": "8 oz tub",
+      "in_stock": true,
+      "substitutes": [
+        "heavy-cream",
+        "half-and-half"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "almond-milk",
+      "name": "Almond Milk",
+      "aisle": "dairy",
+      "unit": "carton",
+      "price": 3.79,
+      "pack_size": "64 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "milk-whole",
+        "milk-2",
+        "milk-skim"
+      ],
+      "tags": []
+    },
+    {
+      "id": "orange-juice",
+      "name": "Orange Juice",
+      "aisle": "dairy",
+      "unit": "carton",
+      "price": 4.29,
+      "pack_size": "52 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "apple-juice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "apple-juice",
+      "name": "Apple Juice",
+      "aisle": "dairy",
+      "unit": "carton",
+      "price": 3.99,
+      "pack_size": "64 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "orange-juice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "spaghetti",
+      "name": "Spaghetti",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 1.49,
+      "pack_size": "16 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "penne-pasta",
+        "fusilli-pasta",
+        "rice-noodles"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "penne-pasta",
+      "name": "Penne Pasta",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 1.49,
+      "pack_size": "16 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "spaghetti",
+        "fusilli-pasta",
+        "rice-noodles"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "fusilli-pasta",
+      "name": "Fusilli Pasta",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 1.49,
+      "pack_size": "16 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "spaghetti",
+        "penne-pasta",
+        "rice-noodles"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "rice-noodles",
+      "name": "Rice Noodles",
+      "aisle": "pantry",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "8 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "spaghetti",
+        "penne-pasta",
+        "fusilli-pasta"
+      ],
+      "tags": []
+    },
+    {
+      "id": "egg-noodles",
+      "name": "Egg Noodles",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 2.49,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "spaghetti",
+        "penne-pasta",
+        "fusilli-pasta"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "white-rice-long-grain",
+      "name": "White Rice, Long Grain",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "2 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "brown-rice",
+        "jasmine-rice",
+        "basmati-rice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "brown-rice",
+      "name": "Brown Rice",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "2 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "white-rice-long-grain",
+        "jasmine-rice",
+        "basmati-rice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "jasmine-rice",
+      "name": "Jasmine Rice",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 4.49,
+      "pack_size": "2 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "white-rice-long-grain",
+        "brown-rice",
+        "basmati-rice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "basmati-rice",
+      "name": "Basmati Rice",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 4.99,
+      "pack_size": "2 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "white-rice-long-grain",
+        "brown-rice",
+        "jasmine-rice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "quinoa",
+      "name": "Quinoa",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 4.99,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "white-rice-long-grain",
+        "brown-rice",
+        "jasmine-rice"
+      ],
+      "tags": []
+    },
+    {
+      "id": "flour-all-purpose",
+      "name": "Flour, All-Purpose",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 3.49,
+      "pack_size": "5 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "flour-bread"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "flour-bread",
+      "name": "Flour, Bread",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "5 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "flour-all-purpose"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "sugar-granulated",
+      "name": "Sugar, Granulated",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "4 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "brown-sugar"
+      ],
+      "tags": []
+    },
+    {
+      "id": "brown-sugar",
+      "name": "Brown Sugar",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "2 lb bag",
+      "in_stock": true,
+      "substitutes": [
+        "sugar-granulated"
+      ],
+      "tags": []
+    },
+    {
+      "id": "salt",
+      "name": "Salt",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.29,
+      "pack_size": "26 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "black-pepper-ground"
+      ],
+      "tags": []
+    },
+    {
+      "id": "black-pepper-ground",
+      "name": "Black Pepper, Ground",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 2.99,
+      "pack_size": "3 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "salt"
+      ],
+      "tags": []
+    },
+    {
+      "id": "olive-oil",
+      "name": "Olive Oil",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 7.99,
+      "pack_size": "16 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "vegetable-oil",
+        "sesame-oil"
+      ],
+      "tags": []
+    },
+    {
+      "id": "vegetable-oil",
+      "name": "Vegetable Oil",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 4.99,
+      "pack_size": "48 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "olive-oil",
+        "sesame-oil"
+      ],
+      "tags": []
+    },
+    {
+      "id": "sesame-oil",
+      "name": "Sesame Oil",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 5.49,
+      "pack_size": "5 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "olive-oil",
+        "vegetable-oil"
+      ],
+      "tags": []
+    },
+    {
+      "id": "soy-sauce",
+      "name": "Soy Sauce",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 3.49,
+      "pack_size": "15 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "tamari"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tamari",
+      "name": "Tamari",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 4.49,
+      "pack_size": "15 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "soy-sauce"
+      ],
+      "tags": []
+    },
+    {
+      "id": "marinara-sauce",
+      "name": "Marinara Sauce",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.49,
+      "pack_size": "24 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "alfredo-sauce"
+      ],
+      "tags": []
+    },
+    {
+      "id": "alfredo-sauce",
+      "name": "Alfredo Sauce",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.99,
+      "pack_size": "15 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "marinara-sauce"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "salsa-red",
+      "name": "Salsa, Red",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.29,
+      "pack_size": "16 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "salsa-verde",
+        "salsa-mango"
+      ],
+      "tags": []
+    },
+    {
+      "id": "salsa-verde",
+      "name": "Salsa Verde",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.49,
+      "pack_size": "16 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "salsa-red",
+        "salsa-mango"
+      ],
+      "tags": []
+    },
+    {
+      "id": "salsa-mango",
+      "name": "Salsa, Mango",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.99,
+      "pack_size": "16 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "salsa-red",
+        "salsa-verde"
+      ],
+      "tags": []
+    },
+    {
+      "id": "chicken-broth",
+      "name": "Chicken Broth",
+      "aisle": "pantry",
+      "unit": "carton",
+      "price": 2.99,
+      "pack_size": "32 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "vegetable-broth",
+        "beef-broth"
+      ],
+      "tags": [
+        "meat"
+      ]
+    },
+    {
+      "id": "vegetable-broth",
+      "name": "Vegetable Broth",
+      "aisle": "pantry",
+      "unit": "carton",
+      "price": 2.99,
+      "pack_size": "32 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-broth",
+        "beef-broth"
+      ],
+      "tags": []
+    },
+    {
+      "id": "beef-broth",
+      "name": "Beef Broth",
+      "aisle": "pantry",
+      "unit": "carton",
+      "price": 2.99,
+      "pack_size": "32 oz carton",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-broth",
+        "vegetable-broth"
+      ],
+      "tags": [
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "canned-tomatoes-diced",
+      "name": "Canned Tomatoes, Diced",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.49,
+      "pack_size": "14 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "canned-tomatoes-crushed",
+        "tomato-paste"
+      ],
+      "tags": []
+    },
+    {
+      "id": "canned-tomatoes-crushed",
+      "name": "Canned Tomatoes, Crushed",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.49,
+      "pack_size": "28 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "canned-tomatoes-diced",
+        "tomato-paste"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tomato-paste",
+      "name": "Tomato Paste",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.29,
+      "pack_size": "6 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "canned-tomatoes-diced",
+        "canned-tomatoes-crushed"
+      ],
+      "tags": []
+    },
+    {
+      "id": "black-beans-canned",
+      "name": "Black Beans, Canned",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.19,
+      "pack_size": "15 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "kidney-beans-canned",
+        "chickpeas-canned",
+        "refried-beans-canned"
+      ],
+      "tags": []
+    },
+    {
+      "id": "kidney-beans-canned",
+      "name": "Kidney Beans, Canned",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.19,
+      "pack_size": "15 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "black-beans-canned",
+        "chickpeas-canned",
+        "refried-beans-canned"
+      ],
+      "tags": []
+    },
+    {
+      "id": "chickpeas-canned",
+      "name": "Chickpeas, Canned",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.19,
+      "pack_size": "15 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "black-beans-canned",
+        "kidney-beans-canned",
+        "refried-beans-canned"
+      ],
+      "tags": []
+    },
+    {
+      "id": "refried-beans-canned",
+      "name": "Refried Beans, Canned",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 1.49,
+      "pack_size": "16 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "black-beans-canned",
+        "kidney-beans-canned",
+        "chickpeas-canned"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tortillas-flour",
+      "name": "Tortillas, Flour",
+      "aisle": "pantry",
+      "unit": "pack",
+      "price": 3.29,
+      "pack_size": "10 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "tortillas-corn",
+        "tortilla-chips",
+        "tortillas-flour-bakery"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "tortillas-corn",
+      "name": "Tortillas, Corn",
+      "aisle": "pantry",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "30 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "tortillas-flour",
+        "tortilla-chips",
+        "tortillas-flour-bakery"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tortilla-chips",
+      "name": "Tortilla Chips",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 3.49,
+      "pack_size": "13 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "tortillas-flour",
+        "tortillas-corn",
+        "tortillas-flour-bakery"
+      ],
+      "tags": []
+    },
+    {
+      "id": "taco-seasoning",
+      "name": "Taco Seasoning",
+      "aisle": "pantry",
+      "unit": "pack",
+      "price": 0.99,
+      "pack_size": "1 oz pack",
+      "in_stock": true,
+      "substitutes": [
+        "chili-powder",
+        "cumin-ground",
+        "paprika"
+      ],
+      "tags": []
+    },
+    {
+      "id": "chili-powder",
+      "name": "Chili Powder",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 2.99,
+      "pack_size": "2.5 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "taco-seasoning",
+        "cumin-ground",
+        "paprika"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cumin-ground",
+      "name": "Cumin, Ground",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 2.99,
+      "pack_size": "2 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "taco-seasoning",
+        "chili-powder",
+        "paprika"
+      ],
+      "tags": []
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 2.99,
+      "pack_size": "2 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "taco-seasoning",
+        "chili-powder",
+        "cumin-ground"
+      ],
+      "tags": []
+    },
+    {
+      "id": "oats-rolled",
+      "name": "Oats, Rolled",
+      "aisle": "pantry",
+      "unit": "can",
+      "price": 3.99,
+      "pack_size": "42 oz can",
+      "in_stock": true,
+      "substitutes": [
+        "cereal-toasted-oats",
+        "cereal-corn-flakes",
+        "granola"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cereal-toasted-oats",
+      "name": "Cereal, Toasted Oats",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 4.29,
+      "pack_size": "12 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "oats-rolled",
+        "cereal-corn-flakes",
+        "granola"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cereal-corn-flakes",
+      "name": "Cereal, Corn Flakes",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 4.29,
+      "pack_size": "12 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "oats-rolled",
+        "cereal-toasted-oats",
+        "granola"
+      ],
+      "tags": []
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 5.49,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "oats-rolled",
+        "cereal-toasted-oats",
+        "cereal-corn-flakes"
+      ],
+      "tags": []
+    },
+    {
+      "id": "peanut-butter-creamy",
+      "name": "Peanut Butter, Creamy",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.99,
+      "pack_size": "16 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "peanut-butter-crunchy",
+        "almond-butter"
+      ],
+      "tags": [
+        "peanut"
+      ]
+    },
+    {
+      "id": "peanut-butter-crunchy",
+      "name": "Peanut Butter, Crunchy",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 3.99,
+      "pack_size": "16 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "peanut-butter-creamy",
+        "almond-butter"
+      ],
+      "tags": [
+        "peanut"
+      ]
+    },
+    {
+      "id": "almond-butter",
+      "name": "Almond Butter",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 7.99,
+      "pack_size": "16 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "peanut-butter-creamy",
+        "peanut-butter-crunchy"
+      ],
+      "tags": []
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 4.99,
+      "pack_size": "12 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "maple-syrup"
+      ],
+      "tags": []
+    },
+    {
+      "id": "maple-syrup",
+      "name": "Maple Syrup",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 6.99,
+      "pack_size": "12 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "honey"
+      ],
+      "tags": []
+    },
+    {
+      "id": "ketchup",
+      "name": "Ketchup",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 2.99,
+      "pack_size": "20 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "mustard-yellow",
+        "mayonnaise",
+        "ranch-dressing"
+      ],
+      "tags": []
+    },
+    {
+      "id": "mustard-yellow",
+      "name": "Mustard, Yellow",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 1.99,
+      "pack_size": "14 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "ketchup",
+        "mayonnaise",
+        "ranch-dressing"
+      ],
+      "tags": []
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "aisle": "pantry",
+      "unit": "jar",
+      "price": 4.49,
+      "pack_size": "30 oz jar",
+      "in_stock": true,
+      "substitutes": [
+        "ketchup",
+        "mustard-yellow",
+        "ranch-dressing"
+      ],
+      "tags": []
+    },
+    {
+      "id": "ranch-dressing",
+      "name": "Ranch Dressing",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 3.49,
+      "pack_size": "16 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "ketchup",
+        "mustard-yellow",
+        "mayonnaise"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "hot-sauce",
+      "name": "Hot Sauce",
+      "aisle": "pantry",
+      "unit": "bottle",
+      "price": 2.99,
+      "pack_size": "5 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "ketchup",
+        "mustard-yellow",
+        "mayonnaise"
+      ],
+      "tags": []
+    },
+    {
+      "id": "crackers-saltine",
+      "name": "Crackers, Saltine",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 2.99,
+      "pack_size": "16 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "crackers-wheat",
+        "pretzels",
+        "popcorn-microwave"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "crackers-wheat",
+      "name": "Crackers, Wheat",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 3.49,
+      "pack_size": "13 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "crackers-saltine",
+        "pretzels",
+        "popcorn-microwave"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "pretzels",
+      "name": "Pretzels",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "crackers-saltine",
+        "crackers-wheat",
+        "popcorn-microwave"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "popcorn-microwave",
+      "name": "Popcorn, Microwave",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 3.99,
+      "pack_size": "6 pack box",
+      "in_stock": true,
+      "substitutes": [
+        "crackers-saltine",
+        "crackers-wheat",
+        "pretzels"
+      ],
+      "tags": []
+    },
+    {
+      "id": "coffee-ground",
+      "name": "Coffee, Ground",
+      "aisle": "pantry",
+      "unit": "bag",
+      "price": 8.99,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "tea-black"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tea-black",
+      "name": "Tea, Black",
+      "aisle": "pantry",
+      "unit": "box",
+      "price": 3.49,
+      "pack_size": "20 count box",
+      "in_stock": true,
+      "substitutes": [
+        "coffee-ground"
+      ],
+      "tags": []
+    },
+    {
+      "id": "bread-white-sandwich",
+      "name": "Bread, White Sandwich",
+      "aisle": "bakery",
+      "unit": "loaf",
+      "price": 2.99,
+      "pack_size": "1 loaf",
+      "in_stock": true,
+      "substitutes": [
+        "bread-whole-wheat",
+        "bread-sourdough",
+        "pita-bread"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "bread-whole-wheat",
+      "name": "Bread, Whole Wheat",
+      "aisle": "bakery",
+      "unit": "loaf",
+      "price": 3.49,
+      "pack_size": "1 loaf",
+      "in_stock": true,
+      "substitutes": [
+        "bread-white-sandwich",
+        "bread-sourdough",
+        "pita-bread"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "bread-sourdough",
+      "name": "Bread, Sourdough",
+      "aisle": "bakery",
+      "unit": "loaf",
+      "price": 4.99,
+      "pack_size": "1 loaf",
+      "in_stock": true,
+      "substitutes": [
+        "bread-white-sandwich",
+        "bread-whole-wheat",
+        "pita-bread"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "bagels-plain",
+      "name": "Bagels, Plain",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.49,
+      "pack_size": "6 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "bagels-everything",
+        "english-muffins"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "bagels-everything",
+      "name": "Bagels, Everything",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.99,
+      "pack_size": "6 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "bagels-plain",
+        "english-muffins"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "english-muffins",
+      "name": "English Muffins",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.29,
+      "pack_size": "6 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "bagels-plain",
+        "bagels-everything"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "tortillas-flour-bakery",
+      "name": "Tortillas, Flour Bakery",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.99,
+      "pack_size": "10 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "tortillas-flour",
+        "tortillas-corn",
+        "tortilla-chips"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "croissants",
+      "name": "Croissants",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 4.49,
+      "pack_size": "4 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "muffins-blueberry",
+        "cinnamon-rolls"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "muffins-blueberry",
+      "name": "Muffins, Blueberry",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 4.29,
+      "pack_size": "4 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "croissants",
+        "cinnamon-rolls"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "cookies-chocolate-chip",
+      "name": "Cookies, Chocolate Chip",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 4.99,
+      "pack_size": "12 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "cookies-oatmeal"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "cookies-oatmeal",
+      "name": "Cookies, Oatmeal",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 4.99,
+      "pack_size": "12 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "cookies-chocolate-chip"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "cake-chocolate",
+      "name": "Cake, Chocolate",
+      "aisle": "bakery",
+      "unit": "each",
+      "price": 14.99,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "pie-apple",
+        "banana-bread"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "pie-apple",
+      "name": "Pie, Apple",
+      "aisle": "bakery",
+      "unit": "each",
+      "price": 12.99,
+      "pack_size": "1 each",
+      "in_stock": true,
+      "substitutes": [
+        "cake-chocolate",
+        "banana-bread"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "pita-bread",
+      "name": "Pita Bread",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.29,
+      "pack_size": "6 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "bread-white-sandwich",
+        "bread-whole-wheat",
+        "bread-sourdough"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "naan-bread",
+      "name": "Naan Bread",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.99,
+      "pack_size": "4 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "bread-white-sandwich",
+        "bread-whole-wheat",
+        "bread-sourdough"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "hamburger-buns",
+      "name": "Hamburger Buns",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "8 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "hot-dog-buns",
+        "dinner-rolls"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "hot-dog-buns",
+      "name": "Hot Dog Buns",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "8 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "hamburger-buns",
+        "dinner-rolls"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "dinner-rolls",
+      "name": "Dinner Rolls",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 3.49,
+      "pack_size": "12 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "hamburger-buns",
+        "hot-dog-buns"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "cinnamon-rolls",
+      "name": "Cinnamon Rolls",
+      "aisle": "bakery",
+      "unit": "pack",
+      "price": 4.99,
+      "pack_size": "4 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "croissants",
+        "muffins-blueberry"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "banana-bread",
+      "name": "Banana Bread",
+      "aisle": "bakery",
+      "unit": "loaf",
+      "price": 6.99,
+      "pack_size": "1 loaf",
+      "in_stock": true,
+      "substitutes": [
+        "cake-chocolate",
+        "pie-apple"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "pizza-cheese-frozen",
+      "name": "Pizza, Cheese Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 5.99,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "pizza-pepperoni-frozen",
+        "pizza-vegetable-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "pizza-pepperoni-frozen",
+      "name": "Pizza, Pepperoni Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 6.49,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "pizza-cheese-frozen",
+        "pizza-vegetable-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy",
+        "pork"
+      ]
+    },
+    {
+      "id": "pizza-vegetable-frozen",
+      "name": "Pizza, Vegetable Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 6.49,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "pizza-cheese-frozen",
+        "pizza-pepperoni-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "french-fries-frozen",
+      "name": "French Fries, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "32 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "tater-tots-frozen",
+        "onion-rings-frozen",
+        "hash-browns-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "tater-tots-frozen",
+      "name": "Tater Tots, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "32 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "french-fries-frozen",
+        "onion-rings-frozen",
+        "hash-browns-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "onion-rings-frozen",
+      "name": "Onion Rings, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "french-fries-frozen",
+        "tater-tots-frozen",
+        "hash-browns-frozen"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "mixed-vegetables-frozen",
+      "name": "Mixed Vegetables, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.49,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "peas-frozen",
+        "green-beans-frozen",
+        "broccoli-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "peas-frozen",
+      "name": "Peas, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.19,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "mixed-vegetables-frozen",
+        "green-beans-frozen",
+        "broccoli-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "green-beans-frozen",
+      "name": "Green Beans, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.49,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "mixed-vegetables-frozen",
+        "peas-frozen",
+        "broccoli-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "broccoli-frozen",
+      "name": "Broccoli, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.49,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "mixed-vegetables-frozen",
+        "peas-frozen",
+        "green-beans-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "berries-mixed-frozen",
+      "name": "Berries, Mixed Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 4.99,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "strawberries",
+        "blueberries",
+        "raspberries"
+      ],
+      "tags": []
+    },
+    {
+      "id": "mango-chunks-frozen",
+      "name": "Mango Chunks, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 4.49,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "strawberries",
+        "blueberries",
+        "raspberries"
+      ],
+      "tags": []
+    },
+    {
+      "id": "waffles-frozen",
+      "name": "Waffles, Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 3.99,
+      "pack_size": "10 count box",
+      "in_stock": true,
+      "substitutes": [
+        "pancakes-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "pancakes-frozen",
+      "name": "Pancakes, Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 3.99,
+      "pack_size": "12 count box",
+      "in_stock": true,
+      "substitutes": [
+        "waffles-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "chicken-nuggets-frozen",
+      "name": "Chicken Nuggets, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 6.49,
+      "pack_size": "32 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "fish-sticks-frozen"
+      ],
+      "tags": [
+        "meat",
+        "gluten"
+      ]
+    },
+    {
+      "id": "fish-sticks-frozen",
+      "name": "Fish Sticks, Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 5.99,
+      "pack_size": "18 oz box",
+      "in_stock": true,
+      "substitutes": [
+        "chicken-nuggets-frozen"
+      ],
+      "tags": [
+        "meat",
+        "fish",
+        "gluten"
+      ]
+    },
+    {
+      "id": "lasagna-frozen",
+      "name": "Lasagna, Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 7.99,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "macaroni-and-cheese-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy",
+        "meat",
+        "beef"
+      ]
+    },
+    {
+      "id": "macaroni-and-cheese-frozen",
+      "name": "Macaroni and Cheese, Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 4.99,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "lasagna-frozen"
+      ],
+      "tags": [
+        "gluten",
+        "dairy"
+      ]
+    },
+    {
+      "id": "soup-tomato-frozen",
+      "name": "Soup, Tomato Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 3.99,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "soup-chicken-noodle-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "soup-chicken-noodle-frozen",
+      "name": "Soup, Chicken Noodle Frozen",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 4.49,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "soup-tomato-frozen"
+      ],
+      "tags": [
+        "meat",
+        "gluten"
+      ]
+    },
+    {
+      "id": "ice-pops",
+      "name": "Ice Pops",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 3.99,
+      "pack_size": "12 count box",
+      "in_stock": true,
+      "substitutes": [
+        "ice-cream-vanilla",
+        "ice-cream-chocolate",
+        "frozen-yogurt-bars"
+      ],
+      "tags": []
+    },
+    {
+      "id": "frozen-yogurt-bars",
+      "name": "Frozen Yogurt Bars",
+      "aisle": "frozen",
+      "unit": "box",
+      "price": 4.99,
+      "pack_size": "6 count box",
+      "in_stock": true,
+      "substitutes": [
+        "ice-cream-vanilla",
+        "ice-cream-chocolate",
+        "ice-pops"
+      ],
+      "tags": [
+        "dairy"
+      ]
+    },
+    {
+      "id": "bread-dough-frozen",
+      "name": "Bread Dough, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 3.99,
+      "pack_size": "16 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "pie-crust-frozen"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "pie-crust-frozen",
+      "name": "Pie Crust, Frozen",
+      "aisle": "frozen",
+      "unit": "pack",
+      "price": 3.49,
+      "pack_size": "2 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "bread-dough-frozen"
+      ],
+      "tags": [
+        "gluten"
+      ]
+    },
+    {
+      "id": "edamame-frozen",
+      "name": "Edamame, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "mixed-vegetables-frozen",
+        "peas-frozen",
+        "green-beans-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "cauliflower-rice-frozen",
+      "name": "Cauliflower Rice, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 2.99,
+      "pack_size": "12 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "mixed-vegetables-frozen",
+        "peas-frozen",
+        "green-beans-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hash-browns-frozen",
+      "name": "Hash Browns, Frozen",
+      "aisle": "frozen",
+      "unit": "bag",
+      "price": 3.49,
+      "pack_size": "32 oz bag",
+      "in_stock": true,
+      "substitutes": [
+        "french-fries-frozen",
+        "tater-tots-frozen",
+        "onion-rings-frozen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "paper-towels",
+      "name": "Paper Towels",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 8.99,
+      "pack_size": "6 roll pack",
+      "in_stock": true,
+      "substitutes": [
+        "toilet-paper",
+        "facial-tissues",
+        "napkins"
+      ],
+      "tags": []
+    },
+    {
+      "id": "toilet-paper",
+      "name": "Toilet Paper",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 9.99,
+      "pack_size": "12 roll pack",
+      "in_stock": true,
+      "substitutes": [
+        "paper-towels",
+        "facial-tissues",
+        "napkins"
+      ],
+      "tags": []
+    },
+    {
+      "id": "facial-tissues",
+      "name": "Facial Tissues",
+      "aisle": "household",
+      "unit": "box",
+      "price": 2.49,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "paper-towels",
+        "toilet-paper",
+        "napkins"
+      ],
+      "tags": []
+    },
+    {
+      "id": "dish-soap",
+      "name": "Dish Soap",
+      "aisle": "household",
+      "unit": "bottle",
+      "price": 3.49,
+      "pack_size": "19 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "dishwasher-detergent",
+        "laundry-detergent",
+        "all-purpose-cleaner"
+      ],
+      "tags": []
+    },
+    {
+      "id": "dishwasher-detergent",
+      "name": "Dishwasher Detergent",
+      "aisle": "household",
+      "unit": "box",
+      "price": 6.99,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "dish-soap",
+        "laundry-detergent",
+        "all-purpose-cleaner"
+      ],
+      "tags": []
+    },
+    {
+      "id": "laundry-detergent",
+      "name": "Laundry Detergent",
+      "aisle": "household",
+      "unit": "bottle",
+      "price": 11.99,
+      "pack_size": "100 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "dish-soap",
+        "dishwasher-detergent",
+        "all-purpose-cleaner"
+      ],
+      "tags": []
+    },
+    {
+      "id": "all-purpose-cleaner",
+      "name": "All-Purpose Cleaner",
+      "aisle": "household",
+      "unit": "bottle",
+      "price": 3.99,
+      "pack_size": "28 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "dish-soap",
+        "dishwasher-detergent",
+        "laundry-detergent"
+      ],
+      "tags": []
+    },
+    {
+      "id": "sponges",
+      "name": "Sponges",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "6 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "dish-soap",
+        "dishwasher-detergent",
+        "laundry-detergent"
+      ],
+      "tags": []
+    },
+    {
+      "id": "trash-bags-kitchen",
+      "name": "Trash Bags, Kitchen",
+      "aisle": "household",
+      "unit": "box",
+      "price": 7.99,
+      "pack_size": "45 count box",
+      "in_stock": true,
+      "substitutes": [
+        "trash-bags-large"
+      ],
+      "tags": []
+    },
+    {
+      "id": "trash-bags-large",
+      "name": "Trash Bags, Large",
+      "aisle": "household",
+      "unit": "box",
+      "price": 8.99,
+      "pack_size": "20 count box",
+      "in_stock": true,
+      "substitutes": [
+        "trash-bags-kitchen"
+      ],
+      "tags": []
+    },
+    {
+      "id": "aluminum-foil",
+      "name": "Aluminum Foil",
+      "aisle": "household",
+      "unit": "box",
+      "price": 4.49,
+      "pack_size": "75 sq ft box",
+      "in_stock": true,
+      "substitutes": [
+        "plastic-wrap",
+        "parchment-paper",
+        "sandwich-bags"
+      ],
+      "tags": []
+    },
+    {
+      "id": "plastic-wrap",
+      "name": "Plastic Wrap",
+      "aisle": "household",
+      "unit": "box",
+      "price": 3.49,
+      "pack_size": "200 sq ft box",
+      "in_stock": true,
+      "substitutes": [
+        "aluminum-foil",
+        "parchment-paper",
+        "sandwich-bags"
+      ],
+      "tags": []
+    },
+    {
+      "id": "parchment-paper",
+      "name": "Parchment Paper",
+      "aisle": "household",
+      "unit": "box",
+      "price": 4.99,
+      "pack_size": "1 box",
+      "in_stock": true,
+      "substitutes": [
+        "aluminum-foil",
+        "plastic-wrap",
+        "sandwich-bags"
+      ],
+      "tags": []
+    },
+    {
+      "id": "sandwich-bags",
+      "name": "Sandwich Bags",
+      "aisle": "household",
+      "unit": "box",
+      "price": 2.99,
+      "pack_size": "50 count box",
+      "in_stock": true,
+      "substitutes": [
+        "aluminum-foil",
+        "plastic-wrap",
+        "parchment-paper"
+      ],
+      "tags": []
+    },
+    {
+      "id": "napkins",
+      "name": "Napkins",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 2.99,
+      "pack_size": "250 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "paper-towels",
+        "toilet-paper",
+        "facial-tissues"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hand-soap",
+      "name": "Hand Soap",
+      "aisle": "household",
+      "unit": "bottle",
+      "price": 2.99,
+      "pack_size": "11 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "shampoo",
+        "toothpaste"
+      ],
+      "tags": []
+    },
+    {
+      "id": "shampoo",
+      "name": "Shampoo",
+      "aisle": "household",
+      "unit": "bottle",
+      "price": 5.99,
+      "pack_size": "12 oz bottle",
+      "in_stock": true,
+      "substitutes": [
+        "hand-soap",
+        "toothpaste"
+      ],
+      "tags": []
+    },
+    {
+      "id": "toothpaste",
+      "name": "Toothpaste",
+      "aisle": "household",
+      "unit": "tube",
+      "price": 3.99,
+      "pack_size": "1 tube",
+      "in_stock": true,
+      "substitutes": [
+        "hand-soap",
+        "shampoo"
+      ],
+      "tags": []
+    },
+    {
+      "id": "batteries-aa",
+      "name": "Batteries, AA",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 6.99,
+      "pack_size": "8 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "batteries-aaa",
+        "light-bulbs"
+      ],
+      "tags": []
+    },
+    {
+      "id": "batteries-aaa",
+      "name": "Batteries, AAA",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 6.99,
+      "pack_size": "8 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "batteries-aa",
+        "light-bulbs"
+      ],
+      "tags": []
+    },
+    {
+      "id": "light-bulbs",
+      "name": "Light Bulbs",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 7.99,
+      "pack_size": "4 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "batteries-aa",
+        "batteries-aaa"
+      ],
+      "tags": []
+    },
+    {
+      "id": "candles",
+      "name": "Candles",
+      "aisle": "household",
+      "unit": "pack",
+      "price": 5.99,
+      "pack_size": "2 count pack",
+      "in_stock": true,
+      "substitutes": [
+        "air-freshener"
+      ],
+      "tags": []
+    },
+    {
+      "id": "air-freshener",
+      "name": "Air Freshener",
+      "aisle": "household",
+      "unit": "bottle",
+      "price": 3.99,
+      "pack_size": "1 bottle",
+      "in_stock": true,
+      "substitutes": [
+        "candles"
+      ],
+      "tags": []
+    },
+    {
+      "id": "charcoal",
+      "name": "Charcoal",
+      "aisle": "household",
+      "unit": "bag",
+      "price": 9.99,
+      "pack_size": "15 lb bag",
+      "in_stock": true,
+      "substitutes": [],
+      "tags": []
+    }
+  ]
+}
