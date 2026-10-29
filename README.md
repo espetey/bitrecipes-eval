@@ -38,7 +38,7 @@ not 100%.
 
 ## Run 1 tasks
 
-One synthetic household, six variants. Same household, same catalog,
+One synthetic household, seven variants. Same household, same catalog,
 different brief parameters:
 
 1. **Normal week.** Base brief, $180 budget. Measures completeness and
@@ -56,6 +56,11 @@ different brief parameters:
    lettuce out of stock, substitutes available. Measures robustness:
    substitute with explanation, or flag — never silently drop, never
    buy wrong.
+7. **Sale week.** Same menu as normal week, budget $180, with a promo
+   set: percent-off, N-for-M, and buy-X-get-Y-free rules on ten items.
+   Measures promo pricing: budget is judged on effective totals, and
+   the profile reports an optimization figure (list total, effective
+   total, minimal total for the expected quantities).
 
 ## Scoring: a profile, not a single number
 
@@ -64,6 +69,13 @@ Run it:
 
 ```
 node scorer.js --cart <cart> --brief household-v1.json --brief-task <task> --catalog catalog-v2.json
+```
+
+For the sale-week task, pass the promo set, or the cart scores at
+list prices:
+
+```
+node scorer.js --cart <cart> --brief household-v1.json --brief-task sale-week --catalog catalog-v2.json --promos promo-sale-week-v1.json
 ```
 
 It outputs the scoring profile as JSON. The leaderboard sorts by
@@ -101,7 +113,7 @@ the run.
 - `catalog-v1.json` — frozen v1.0 catalog, retained for reference.
   Run 1 briefs and example scores reproduce exactly under v2.0.
 - `household-v1.json` — one synthetic household (4 people, invented
-  names, no user data), six briefs. Each brief: settings, dinners with
+  names, no user data), seven briefs. Each brief: settings, dinners with
   servings and picked-by, breakfast/lunch/snacks calls, pantry owned,
   leftovers, stated constraints, preference pairs, reorder history,
   and `expected_lines` as ground truth.
