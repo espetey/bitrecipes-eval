@@ -63,7 +63,7 @@ different brief parameters:
 Run it:
 
 ```
-node scorer.js --cart <cart> --brief household-v1.json --brief-task <task> --catalog catalog-v1.json
+node scorer.js --cart <cart> --brief household-v1.json --brief-task <task> --catalog catalog-v2.json
 ```
 
 It outputs the scoring profile as JSON. The leaderboard sorts by
@@ -88,11 +88,16 @@ the run.
 
 ## Files
 
-- `catalog-v1.json` — frozen synthetic catalog, v1.0. 248 SKUs across
-  produce, meat/seafood, dairy, pantry, bakery, frozen, and household.
-  Each item: `id`, `name`, `aisle`, `unit`, `price` (USD, invented),
-  `pack_size`, `in_stock`, `substitutes` (catalog ids, 0–3), `tags`.
-  No real store, no scraped data, no real product data.
+- `catalog-v2.json` — frozen synthetic catalog, v2.0. 2,112 SKUs across
+  produce, meat/seafood, dairy, pantry, bakery, frozen, and household:
+  the v1.0 items plus brand variants and new products. Each item: `id`,
+  `name`, `aisle`, `unit`, `price` (USD, invented), `pack_size`,
+  `in_stock`, `substitutes` (catalog ids), `tags`, and `brand` on
+  brand-variant items. Brand definitions (tier + positioning note) live
+  in the file's `brands` array. No real store, no scraped data, no real
+  product data, no real brands.
+- `catalog-v1.json` — frozen v1.0 catalog, retained for reference.
+  Run 1 briefs and example scores reproduce exactly under v2.0.
 - `household-v1.json` — one synthetic household (4 people, invented
   names, no user data), six briefs. Each brief: settings, dinners with
   servings and picked-by, breakfast/lunch/snacks calls, pantry owned,
