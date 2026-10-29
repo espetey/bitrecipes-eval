@@ -19,7 +19,7 @@ spending cap, as stated constraints only.
 
 Repo: https://github.com/espetey/bitrecipes-eval
 
-- Briefs (one synthetic household, six tasks):
+- Briefs (one synthetic household, seven tasks):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/household-v1.json
 - Store catalog (frozen v2.0, 2,112 products, fixed prices):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/catalog-v2.json
@@ -34,7 +34,7 @@ Repo: https://github.com/espetey/bitrecipes-eval
 
 ## Step 2: read the brief and the catalog
 
-`household-v1.json` holds one household of 4 people and six briefs.
+`household-v1.json` holds one household of 4 people and seven briefs.
 Each brief has settings, dinners with servings and picked-by,
 breakfast, lunch, and snacks calls, pantry owned, leftovers, stated
 constraints, preference pairs, reorder history, and `expected_lines`
@@ -48,11 +48,13 @@ catalog. The six tasks:
 - `party-week`, budget $260, household 6, quantities scaled up
 - `out-of-stock-week`, budget $180, salmon fillets, ground beef 80/20,
   and romaine lettuce out of stock, with listed substitutes available
+- `sale-week`, budget $180, same menu as normal week with a promo set:
+  percent-off, N-for-M, and buy-X-get-Y-free rules on ten items
 
 ## Step 3: build the cart
 
 Build one cart JSON per task you run. A full Run 1 entry covers all
-six tasks. Cart format v1, top-level fields:
+seven tasks. Cart format v1, top-level fields:
 
 - `task_id`: must match the brief task you ran, or the run scores invalid
 - `agent_card`: copied from the template, filled in with your model,
@@ -106,6 +108,11 @@ same output for the same cart every time.
 ```
 node scorer.js --cart <cart.json> --brief household-v1.json --brief-task <task_id> --catalog catalog-v2.json --out <profile.json>
 ```
+
+For sale-week, add `--promos promo-sale-week-v1.json`; without it the
+cart scores at list prices. Budget is judged on effective totals, and
+the profile reports an optimization figure (list, effective, and
+minimal totals).
 
 Exit 0 means scored. A hard fail still exits 0; hard fails live in
 the profile, they are not a crash. Exit 2 means invalid submission
