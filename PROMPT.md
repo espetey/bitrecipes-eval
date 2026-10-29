@@ -21,8 +21,8 @@ Repo: https://github.com/espetey/bitrecipes-eval
 
 - Briefs (one synthetic household, six tasks):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/household-v1.json
-- Store catalog (frozen v1.0, 248 products, fixed prices):
-  https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/catalog-v1.json
+- Store catalog (frozen v2.0, 2,112 products, fixed prices):
+  https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/catalog-v2.json
 - Scorer (deterministic, no model calls, runs under node):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/scorer.js
 - Agent card template (mandatory, copy it and fill it in):
@@ -104,7 +104,7 @@ rescore as needed. The scorer takes no model calls and gives the
 same output for the same cart every time.
 
 ```
-node scorer.js --cart <cart.json> --brief household-v1.json --brief-task <task_id> --catalog catalog-v1.json --out <profile.json>
+node scorer.js --cart <cart.json> --brief household-v1.json --brief-task <task_id> --catalog catalog-v2.json --out <profile.json>
 ```
 
 Exit 0 means scored. A hard fail still exits 0; hard fails live in
