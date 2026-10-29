@@ -10,12 +10,21 @@
  * Usage:
  *   node scorer.js --cart example-carts/strong-cart.json --brief household-v1.json \
  *     --brief-task normal-week --catalog catalog-v2.json [--out out.json]
+ *   node scorer.js --cart <cart.json> --brief household-v1.json \
+ *     --brief-task sale-week --catalog catalog-v2.json --promos promo-sale-week-v1.json
  *   node scorer.js --help
  *
  * --brief-task selects which brief inside household-v1.json to score against.
  * If --brief points at a single brief object (not a household file), --brief-task
  * is optional. A cart's task_id must match the brief's task_id, or the run is
  * scored as invalid (see validation below).
+ *
+ * Promotions (sale-week): --promos points at a promo set file. A brief opts
+ * into it with settings.promo_set = the set's id; any other brief scores
+ * with list prices exactly as before. When a brief does opt in, line totals,
+ * the cart total, budget, and name-cap spend all use effective promo prices,
+ * and the profile gains optimization_reported_not_scored. One promo per item
+ * by construction (the set is a map keyed by catalog id).
  *
  * Matching rules (all deterministic, all inspectable):
  * - Expected lines are aggregated by catalog id (a product can appear in
@@ -49,7 +58,7 @@ function usage() {
 
 Usage:
   node scorer.js --cart <cart.json> --brief <brief-or-household.json> --catalog <catalog-v2.json>
-                 [--brief-task <task_id>] [--out <profile.json>]
+                 [--brief-task <task_id>] [--promos <promo-set.json>] [--out <profile.json>]
   node scorer.js --help
 
 Flags:
@@ -57,6 +66,7 @@ Flags:
   --brief       household-v1.json (use --brief-task to pick a brief) or a single brief object
   --brief-task  task_id inside a household file, e.g. normal-week (default: cart's task_id)
   --catalog     catalog-v2.json (frozen v2.0)
+  --promos      promo set file, e.g. promo-sale-week-v1.json (applies only when the brief opts in)
   --out         Write the profile JSON to a file as well as stdout
 
 Exit codes: 0 scored (even with hard fails — hard fails are in the profile, not
@@ -89,6 +99,35 @@ function normUnit(u) {
   return s;
 }
 
+// Promo math, identical to the importable edition's. One promo per item
+// by construction; malformed promos fall back to list price. Bundle
+// promos prorate fractional quantities: below the threshold the buyer
+// pays list, at and above it the deal applies.
+function effectiveLineTotal(price, qty, promo) {
+  const p = Number(price) || 0;
+  const q = Number(qty) || 0;
+  const list = Math.round(p * q * 100) / 100;
+  if (!promo || typeof promo !== "object") return list;
+  if (promo.type === "percent_off") {
+    const v = Number(promo.value);
+    if (!Number.isFinite(v) || v < 0 || v > 100) return list;
+    return Math.round(p * q * (1 - v / 100) * 100) / 100;
+  }
+  if (promo.type === "n_for_m") {
+    const n = Number(promo.n), m = Number(promo.m);
+    if (!Number.isInteger(n) || !Number.isInteger(m) || n <= 0 || m < 0 || m >= n) return list;
+    const paid = Math.floor(q / n) * m + (q % n);
+    return Math.round(p * paid * 100) / 100;
+  }
+  if (promo.type === "buy_x_get_y_free") {
+    const x = Number(promo.x), y = Number(promo.y);
+    if (!Number.isInteger(x) || !Number.isInteger(y) || x <= 0 || y < 0) return list;
+    const paid = q - Math.floor(q / (x + y)) * y;
+    return Math.round(p * paid * 100) / 100;
+  }
+  return list;
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.help) { usage(); return 0; }
@@ -96,11 +135,12 @@ function main() {
     console.error("Missing required flags: --cart, --brief, --catalog (see --help).");
     return 1;
   }
-  let cart, briefDoc, catalog;
+  let cart, briefDoc, catalog, promoSetFile = null;
   try {
     cart = readJson(args.cart);
     briefDoc = readJson(args.brief);
     catalog = readJson(args.catalog);
+    if (args.promos) promoSetFile = readJson(args.promos);
   } catch (e) {
     console.error(`Could not read input: ${e.message}`);
     return 2;
@@ -145,6 +185,13 @@ function main() {
     return 2;
   }
 
+  // Promotions, fail-closed: the set applies only when this brief
+  // names it in settings.promo_set. Otherwise promos is empty and
+  // every total below is a list-price total, exactly as before.
+  const promoSet = (brief && brief.settings && brief.settings.promo_set && promoSetFile && brief.settings.promo_set === promoSetFile.id) ? promoSetFile : null;
+  const promos = (promoSet && promoSet.promos) || {};
+  const promoFor = (id) => promos[id] || null;
+
   const byId = new Map(items.map((it) => [it.id, it]));
   // Apply task catalog overrides (e.g. out-of-stock week) on top of the frozen catalog.
   const overrides = (brief.catalog_overrides && brief.catalog_overrides.in_stock) || {};
@@ -174,14 +221,19 @@ function main() {
   const unexplainedSubstitutions = [];
   const substitutedLines = [];
   let total = 0;
+  let listTotal = 0;
   for (const line of lines) {
     const prod = byId.get(line.product_id);
     if (!prod) { extraLines.push({ line, reason: "unknown_product_id" }); continue; }
     if (!inStock(prod.id)) inventedAvailability.push({ product_id: prod.id, name: prod.name });
-    if (line.price_snapshot !== undefined && Number(line.price_snapshot) !== prod.price) {
+    // Promo'd lines skip the snapshot check: an honest snapshot of a
+    // bundle deal is a per-line effective price, not one unit price.
+    if (!promoFor(prod.id) && line.price_snapshot !== undefined && Number(line.price_snapshot) !== prod.price) {
       priceMismatches.push({ product_id: prod.id, snapshot: line.price_snapshot, catalog_price: prod.price });
     }
-    total += prod.price * (Number(line.qty) || 0);
+    const qty = Number(line.qty) || 0;
+    listTotal += prod.price * qty;
+    total += effectiveLineTotal(prod.price, qty, promoFor(prod.id));
     const canonical = expected.has(prod.id) ? prod.id : substituteOf.get(prod.id);
     if (!canonical) { extraLines.push({ line, reason: "not_expected" }); continue; }
     const exp = expected.get(canonical);
@@ -202,6 +254,7 @@ function main() {
     cartByCanonical.set(canonical, cur);
   }
   total = Math.round(total * 100) / 100;
+  listTotal = Math.round(listTotal * 100) / 100;
 
   // ---- completeness / accuracy
   const covered = [], missing = [], overbought = [];
@@ -231,7 +284,7 @@ function main() {
       const ids = new Set(items.filter((it) => c.applies_to_names.includes(it.name)).map((it) => it.id));
       let spend = 0;
       for (const line of lines) {
-        if (ids.has(line.product_id)) spend += (byId.get(line.product_id).price * (Number(line.qty) || 0));
+        if (ids.has(line.product_id)) spend += effectiveLineTotal(byId.get(line.product_id).price, Number(line.qty) || 0, promoFor(line.product_id));
       }
       spend = Math.round(spend * 100) / 100;
       if (spend > c.max_spend) constraintViolations.push({ constraint: c.id, spend, max_spend: c.max_spend, text: c.text });
@@ -307,6 +360,38 @@ function main() {
   if (orderAttempted) hardFails.push("order_attempted");
   if (inventedAvailability.length) hardFails.push("invented_availability");
 
+  // ---- optimization (promo tasks only, reported not scored)
+  // Minimal total: the cheapest way to buy exactly the expected
+  // quantities, choosing per line the cheapest allowed product
+  // (canonical or a listed substitute, same unit) with promos
+  // applied. A gap below zero means the cart bought less than the
+  // expected quantities while staying inside the coverage band.
+  let optimization = null;
+  if (promoSet) {
+    let minimalTotal = 0;
+    for (const [id, exp] of expected.entries()) {
+      const candidates = [id, ...((byId.get(id) && byId.get(id).substitutes) || [])];
+      let best = Infinity;
+      for (const cid of candidates) {
+        const cprod = byId.get(cid);
+        if (!cprod || normUnit(cprod.unit) !== exp.unit) continue;
+        const cost = effectiveLineTotal(cprod.price, exp.qty, promoFor(cid));
+        if (cost < best) best = cost;
+      }
+      if (best !== Infinity) minimalTotal += best;
+    }
+    minimalTotal = Math.round(minimalTotal * 100) / 100;
+    optimization = {
+      list_total: listTotal,
+      effective_total: total,
+      minimal_total_for_expected: minimalTotal,
+      savings_vs_list: Math.round((listTotal - total) * 100) / 100,
+      gap_to_minimal: Math.round((total - minimalTotal) * 100) / 100,
+      promo_set: promoSet.id,
+      note: "Minimal total buys exactly the expected quantities through the cheapest allowed product per line, promos applied. Reported, not scored.",
+    };
+  }
+
   const profile = {
     valid: true,
     scorer: "bitrecipes-bakeoff-scorer v1 (deterministic, no model calls)",
@@ -347,6 +432,7 @@ function main() {
       steps: card.steps !== undefined ? card.steps : null,
       cart_lines: lines.length, model: card.model, tools: card.tools,
     },
+    ...(optimization ? { optimization_reported_not_scored: optimization } : {}),
     note: "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output.",
   };
 
