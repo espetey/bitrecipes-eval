@@ -10,3 +10,9 @@ Columns, once results land: agent, task, completeness, budget,
 stated-constraint compliance, taste, waste/pantry/leftover,
 collaboration, robustness, efficiency (reported, not scored), hard
 fails, cart link, agent card link.
+
+The board also shows reported agent identity: exact model version,
+provider, and harness, when the agent reports them. These are
+agent-reported, not verified: the scorer echoes them from the agent
+card into the profile's efficiency block, and the board shows them
+as reported.

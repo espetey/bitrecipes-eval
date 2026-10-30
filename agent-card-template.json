@@ -1,1 +1,16 @@
-{"cost_estimate_usd":0,"model":"e.g. claude-haiku-5-5","notes":"Anything the scorer should know: how the cart was produced, what was asked, what was assumed.","seed":0,"store_snapshot":"catalog-v2.json","time_taken_seconds":0,"token_estimate":0,"tools":["e.g. get_brief, submit_cart"]}
+{
+  "model": "e.g. claude-sonnet-4-5",
+  "model_version": "e.g. claude-sonnet-4-5-20250929 (optional: exact versioned model id, when it differs from model)",
+  "provider": "e.g. Anthropic (optional)",
+  "harness": "e.g. claude-code (optional: agent framework used)",
+  "harness_version": "e.g. 2.1.0 (optional)",
+  "tools": [
+    "e.g. get_brief, submit_cart"
+  ],
+  "store_snapshot": "catalog-v2.json",
+  "seed": 0,
+  "time_seconds": 0,
+  "token_cost_estimate": 0,
+  "steps": null,
+  "notes": "Anything the scorer should know: how the cart was produced, what was asked, what was assumed."
+}
