@@ -22,9 +22,16 @@
  * Promotions (sale-week): --promos points at a promo set file. A brief opts
  * into it with settings.promo_set = the set's id; any other brief scores
  * with list prices exactly as before. When a brief does opt in, line totals,
- * the cart total, budget, and name-cap spend all use effective promo prices,
- * and the profile gains optimization_reported_not_scored. One promo per item
- * by construction (the set is a map keyed by catalog id).
+ * the cart total, budget, and name-cap spend all use effective promo prices.
+ * The profile always carries optimization_reported_not_scored (minimal total
+ * for the expected lines); on promo tasks promos are applied, otherwise list
+ * prices are used. One promo per item by construction (the set is a map
+ * keyed by catalog id).
+ *
+ * Oct 29, 2026: optimization reporting generalized from promo tasks only to
+ * all tasks. Scores are unchanged; the five example carts were re-run and
+ * every scored dimension matches the published outputs, which gained only
+ * the new reported field.
  *
  * Matching rules (all deterministic, all inspectable):
  * - Expected lines are aggregated by catalog id (a product can appear in
@@ -360,37 +367,37 @@ function main() {
   if (orderAttempted) hardFails.push("order_attempted");
   if (inventedAvailability.length) hardFails.push("invented_availability");
 
-  // ---- optimization (promo tasks only, reported not scored)
+  // ---- optimization (all tasks, reported not scored)
   // Minimal total: the cheapest way to buy exactly the expected
   // quantities, choosing per line the cheapest allowed product
-  // (canonical or a listed substitute, same unit) with promos
-  // applied. A gap below zero means the cart bought less than the
-  // expected quantities while staying inside the coverage band.
-  let optimization = null;
-  if (promoSet) {
-    let minimalTotal = 0;
-    for (const [id, exp] of expected.entries()) {
-      const candidates = [id, ...((byId.get(id) && byId.get(id).substitutes) || [])];
-      let best = Infinity;
-      for (const cid of candidates) {
-        const cprod = byId.get(cid);
-        if (!cprod || normUnit(cprod.unit) !== exp.unit) continue;
-        const cost = effectiveLineTotal(cprod.price, exp.qty, promoFor(cid));
-        if (cost < best) best = cost;
-      }
-      if (best !== Infinity) minimalTotal += best;
+  // (canonical or a listed substitute, same unit). On promo tasks
+  // promos are applied; otherwise prices are list prices. A gap
+  // below zero means the cart bought less than the expected
+  // quantities while staying inside the coverage band.
+  let minimalTotal = 0;
+  for (const [id, exp] of expected.entries()) {
+    const candidates = [id, ...((byId.get(id) && byId.get(id).substitutes) || [])];
+    let best = Infinity;
+    for (const cid of candidates) {
+      const cprod = byId.get(cid);
+      if (!cprod || normUnit(cprod.unit) !== exp.unit) continue;
+      const cost = effectiveLineTotal(cprod.price, exp.qty, promoFor(cid));
+      if (cost < best) best = cost;
     }
-    minimalTotal = Math.round(minimalTotal * 100) / 100;
-    optimization = {
-      list_total: listTotal,
-      effective_total: total,
-      minimal_total_for_expected: minimalTotal,
-      savings_vs_list: Math.round((listTotal - total) * 100) / 100,
-      gap_to_minimal: Math.round((total - minimalTotal) * 100) / 100,
-      promo_set: promoSet.id,
-      note: "Minimal total buys exactly the expected quantities through the cheapest allowed product per line, promos applied. Reported, not scored.",
-    };
+    if (best !== Infinity) minimalTotal += best;
   }
+  minimalTotal = Math.round(minimalTotal * 100) / 100;
+  const optimization = {
+    list_total: listTotal,
+    effective_total: total,
+    minimal_total_for_expected: minimalTotal,
+    savings_vs_list: Math.round((listTotal - total) * 100) / 100,
+    gap_to_minimal: Math.round((total - minimalTotal) * 100) / 100,
+    promo_set: promoSet ? promoSet.id : null,
+    note: promoSet
+      ? "Minimal total buys exactly the expected quantities through the cheapest allowed product per line, promos applied. Reported, not scored."
+      : "Minimal total buys exactly the expected quantities through the cheapest allowed product per line, list prices. Reported, not scored.",
+  };
 
   const profile = {
     valid: true,
@@ -432,7 +439,7 @@ function main() {
       steps: card.steps !== undefined ? card.steps : null,
       cart_lines: lines.length, model: card.model, tools: card.tools,
     },
-    ...(optimization ? { optimization_reported_not_scored: optimization } : {}),
+    optimization_reported_not_scored: optimization,
     note: "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output.",
   };
 

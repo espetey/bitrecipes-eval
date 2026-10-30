@@ -2,7 +2,7 @@
   "valid": true,
   "scorer": "bitrecipes-bakeoff-scorer v1 (deterministic, no model calls)",
   "task_id": "normal-week",
-  "catalog_version": "v1.0",
+  "catalog_version": "v2.0",
   "hard_fail": false,
   "hard_fails": [],
   "completeness_accuracy": {
@@ -87,6 +87,15 @@
       "catalog lookup",
       "brief reader"
     ]
+  },
+  "optimization_reported_not_scored": {
+    "list_total": 120.67,
+    "effective_total": 120.67,
+    "minimal_total_for_expected": 101.07,
+    "savings_vs_list": 0,
+    "gap_to_minimal": 19.6,
+    "promo_set": null,
+    "note": "Minimal total buys exactly the expected quantities through the cheapest allowed product per line, list prices. Reported, not scored."
   },
   "note": "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output."
 }
