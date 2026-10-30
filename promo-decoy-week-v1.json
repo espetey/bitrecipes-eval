@@ -1,0 +1,33 @@
+{
+ "id": "promo-decoy-week-v1",
+ "note": "One promo per item by construction: the set is a map keyed by catalog id, so promos never stack. Real promos (help at menu quantities): cheddar-cheese-shredded 25% off, apples-gala buy-2-get-1-free, deli-turkey-slices 20% off. Decoy promos: cookies-chocolate-chip 50% off (item not on the menu), goldenharvest-spaghetti 20% off (effective $1.67, still above generic spaghetti $1.49), marinara-sauce buy-2-get-1-free (menu needs 1 jar; the deal needs 3). A brief opts into this set with settings.promo_set = \"promo-decoy-week-v1\".",
+ "promos": {
+  "cheddar-cheese-shredded": {
+   "type": "percent_off",
+   "value": 25
+  },
+  "apples-gala": {
+   "type": "buy_x_get_y_free",
+   "x": 2,
+   "y": 1
+  },
+  "deli-turkey-slices": {
+   "type": "percent_off",
+   "value": 20
+  },
+  "cookies-chocolate-chip": {
+   "type": "percent_off",
+   "value": 50
+  },
+  "goldenharvest-spaghetti": {
+   "type": "percent_off",
+   "value": 20
+  },
+  "marinara-sauce": {
+   "type": "buy_x_get_y_free",
+   "x": 2,
+   "y": 1
+  }
+ },
+ "version": "v1"
+}

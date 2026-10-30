@@ -3,15 +3,15 @@
  * Bit.recipes Bake-Off Run 1 — deterministic scorer (no dependencies, no model calls).
  *
  * Inputs: a cart JSON (cart format v1), a brief (from household-v1.json),
- * and the frozen catalog (catalog-v2.json).
+ * and the frozen catalog (catalog-v3.json).
  * Output: a scoring PROFILE as JSON, not a single number. There is
  * deliberately no composite score: a single number is exactly what gets gamed.
  *
  * Usage:
  *   node scorer.js --cart example-carts/strong-cart.json --brief household-v1.json \
- *     --brief-task normal-week --catalog catalog-v2.json [--out out.json]
+ *     --brief-task normal-week --catalog catalog-v3.json [--out out.json]
  *   node scorer.js --cart <cart.json> --brief household-v1.json \
- *     --brief-task sale-week --catalog catalog-v2.json --promos promo-sale-week-v1.json
+ *     --brief-task sale-week --catalog catalog-v3.json --promos promo-sale-week-v1.json
  *   node scorer.js --help
  *
  * --brief-task selects which brief inside household-v1.json to score against.
@@ -64,7 +64,7 @@ function usage() {
   console.log(`Bit.recipes Bake-Off Run 1 scorer (deterministic, no model calls)
 
 Usage:
-  node scorer.js --cart <cart.json> --brief <brief-or-household.json> --catalog <catalog-v2.json>
+  node scorer.js --cart <cart.json> --brief <brief-or-household.json> --catalog <catalog-v3.json>
                  [--brief-task <task_id>] [--promos <promo-set.json>] [--out <profile.json>]
   node scorer.js --help
 
@@ -72,7 +72,7 @@ Flags:
   --cart        Cart JSON, cart format v1 (task_id, agent_card, lines[] required)
   --brief       household-v1.json (use --brief-task to pick a brief) or a single brief object
   --brief-task  task_id inside a household file, e.g. normal-week (default: cart's task_id)
-  --catalog     catalog-v2.json (frozen v2.0)
+  --catalog     catalog-v3.json (frozen v3.0)
   --promos      promo set file, e.g. promo-sale-week-v1.json (applies only when the brief opts in)
   --out         Write the profile JSON to a file as well as stdout
 

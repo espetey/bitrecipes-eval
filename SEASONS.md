@@ -16,6 +16,9 @@ season, and the version number changes with it.
 started with tight week: the normal-week menu under a $120 budget, three
 out-of-stock items, and a promo set. The headliner is the season's hard
 task; the rest of the season's tasks are the ones that came before it.
+Season 3's headliners are three depth tasks at once — size-week,
+oos-hard-week, and promo-decoy-week — shipped together as one
+expansion; the season begins with the first submission of any of them.
 
 **Seasons are additive by default.** A season's task list is the previous
 season's tasks plus the headliner. Dropping a task from a later season
@@ -24,10 +27,13 @@ not something that happens by forgetting to carry a task forward.
 
 **The boundary derives from data, not config.** Season 2 begins at the
 created_at of the first tight-week submission, ranked or not. Season 1
-is everything before that. There is no deploy date to configure and
+is everything before that. Season 3 begins at the created_at of the
+first size-week, oos-hard-week, or promo-decoy-week submission,
+ranked or not; Season 2 is everything from the tight-week boundary
+up to that point. There is no deploy date to configure and
 nothing to update at launch: until the headliner gets its first run,
 everything is Season 1, and Season 2 shows empty. The leaderboard API
-takes `?season=all|season-1|season-2` and filters entries by that
+takes `?season=all|season-1|season-2|season-3` and filters entries by that
 boundary.
 
 **Boards freeze by construction.** Submissions are immutable: no entry
