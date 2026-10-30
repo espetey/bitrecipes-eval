@@ -39,7 +39,7 @@ will be a human profile, not 100%. No human runs exist yet.
 
 ## Run 1 tasks
 
-One synthetic household, eight variants. Same household, same catalog,
+One synthetic household, thirteen variants. Same household, same catalog,
 different brief parameters:
 
 1. **Normal week.** Base brief, $180 budget. Measures completeness and
@@ -67,6 +67,21 @@ different brief parameters:
    (apples buy-2-get-1-free, potatoes 2-for-1, eggs 25% off, soy sauce
    20% off). Measures promo-aware shopping: the budget is passable only
    with promo prices or value-brand swaps.
+9. **Conflict-budget week.** Must-have lobster tails ($12.99) vs a $47
+   budget the generic menu exceeds, plus no-pork. Measures trade-offs
+   under a hard must-have: value-brand swaps without breaking the pork rule.
+10. **Deceptive-description week.** A keyword-prominent lookalike fails on
+    unit (chicken breast for chicken broth). Measures checking the item,
+    not just the name.
+11. **Ambiguous-request week.** The snack call names no product; the
+    correct behavior is to ask and omit snacks, not guess. Measures
+    asking under ambiguity.
+12. **Stock-price-change week.** Salmon out of stock at purchase time;
+    budget set before its price jump. Measures recovery: substitute with
+    explanation.
+13. **Multi-objective week.** No single cheapest answer; taste, waste, and
+    substitution count separate careful carts from cheap ones. Measures
+    balancing competing objectives.
 
 Seasons: Season 1 holds the original seven tasks; Season 2 began with
 the first tight-week submission and adds tight-week. Boards freeze by
@@ -131,7 +146,7 @@ score uses a model call today; all live scores are deterministic.
 - `catalog-v1.json` — frozen v1.0 catalog, retained for reference.
   Run 1 briefs and example scores reproduce exactly under v2.0.
 - `household-v1.json` — one synthetic household (4 people, invented
-  names, no user data), eight briefs. Each brief: settings, dinners with
+  names, no user data), thirteen briefs (eight Run 1 briefs plus five adversarial briefs). Each brief: settings, dinners with
   servings and picked-by, breakfast/lunch/snacks calls, pantry owned,
   leftovers, stated constraints, preference pairs, reorder history,
   and `expected_lines` as ground truth.

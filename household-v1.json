@@ -4078,6 +4078,1143 @@
           "times_ordered": 3
         }
       ]
+    },
+    {
+      "calls": {
+        "breakfast": {
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "milk-2",
+              "name": "Milk, 2%",
+              "qty": 1,
+              "unit": "gallon"
+            }
+          ],
+          "mode": "week",
+          "text": "Eggs and milk for breakfasts"
+        },
+        "lunch": {
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ],
+          "mode": "week",
+          "text": "Apples, crackers, and cheddar for lunches"
+        },
+        "snacks": {
+          "ingredients": [],
+          "mode": "week",
+          "text": "No separate snack call this week."
+        }
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Lobster tails with butter and asparagus \u2014 the week's special-occasion dinner. Lobster is the must-have; do not swap it for another seafood."
+        },
+        {
+          "day": "Tuesday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Spaghetti with marinara"
+        },
+        {
+          "day": "Wednesday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Turkey sandwiches"
+        }
+      ],
+      "expected_lines": [
+        {
+          "catalog_id": "lobster-tails",
+          "day": "Monday",
+          "dish": "Lobster tails with butter and asparagus",
+          "ingredient": "Lobster Tails",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "catalog_id": "butter-salted",
+          "day": "Monday",
+          "dish": "Lobster tails with butter and asparagus",
+          "ingredient": "Butter, Salted",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "catalog_id": "asparagus",
+          "day": "Monday",
+          "dish": "Lobster tails with butter and asparagus",
+          "ingredient": "Asparagus",
+          "qty": 1,
+          "unit": "bunch"
+        },
+        {
+          "catalog_id": "spaghetti",
+          "day": "Tuesday",
+          "dish": "Spaghetti with marinara",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "marinara-sauce",
+          "day": "Tuesday",
+          "dish": "Spaghetti with marinara",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "catalog_id": "deli-turkey-slices",
+          "day": "Wednesday",
+          "dish": "Turkey sandwiches",
+          "ingredient": "Deli Turkey Slices",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "catalog_id": "bread-whole-wheat",
+          "day": "Wednesday",
+          "dish": "Turkey sandwiches",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "catalog_id": "eggs-12-count",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "catalog_id": "milk-2",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Milk, 2%",
+          "qty": 1,
+          "unit": "gallon"
+        },
+        {
+          "catalog_id": "apples-gala",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "crackers-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "cheddar-cheese-shredded",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "format": "bitrecipes-agent-brief/v1",
+      "household_id": "bakeoff-household-v1",
+      "notes": "DRAFT (held-out Run 2 material \u2014 do not publish before Run 2). Conflicting constraints: a must-have premium item with no same-unit substitute (lobster-tails, $12.99/pack; its listed substitutes are shrimp/scallops in bags, a unit mismatch) plus a $47 budget that the generic menu ($50.68) exceeds, plus a no-pork rule. The cheap way out of the turkey line is ham ($4.29), which hard-fails on pork. The careful cart buys lobster plus chicken slices (not ham) plus ValueMart swaps on staples and fits at $43.98. Keyword-first-match fails twice: it buys butter lettuce for butter and bread flour for bread (both unit mismatches, lines missed) and lands at $48.48, over budget. Cheapest-per-line fits budget at $40.78 but hard-fails on pork (ham for the turkey line) and also misses the must-have lobster line (it picks shrimp-peeled, a bag vs pack unit mismatch), landing 11/12. week_of is a placeholder to set at run time.",
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "settings": {
+        "best_day": "Saturday",
+        "budget": 47,
+        "grocery_source": "Generic Grocery Pickup",
+        "household_size": 4,
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup"
+      },
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "text": "Total budget $47. The lobster tails ($12.99) are the must-have premium item; the full menu at generic prices is $50.68, so the cart must save somewhere \u2014 value-brand swaps on staples \u2014 without breaking the no-pork rule.",
+          "type": "budget"
+        },
+        {
+          "forbids_tags": [
+            "pork"
+          ],
+          "id": "no-pork",
+          "text": "Household does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "type": "forbids_tags"
+        }
+      ],
+      "task_id": "adv-conflict-budget",
+      "title": "Special-occasion week: lobster must-have vs a $47 budget",
+      "version": "v1",
+      "week_of": "2026-12-07"
+    },
+    {
+      "calls": {
+        "breakfast": {
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "milk-2",
+              "name": "Milk, 2%",
+              "qty": 1,
+              "unit": "gallon"
+            }
+          ],
+          "mode": "week",
+          "text": "Eggs and milk for breakfasts"
+        },
+        "lunch": {
+          "ingredients": [
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ],
+          "mode": "week",
+          "text": "Apples, crackers, and cheddar for lunches"
+        },
+        "snacks": {
+          "ingredients": [],
+          "mode": "week",
+          "text": "No separate snack call this week."
+        }
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Chicken noodle soup. The chicken in this soup is chicken broth, 1 carton \u2014 broth comes in cartons. The first chicken item on the shelf is chicken breast, sold by the pound; that is a cut of meat, not broth. Check the unit before buying."
+        },
+        {
+          "day": "Tuesday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Spaghetti with marinara"
+        }
+      ],
+      "expected_lines": [
+        {
+          "catalog_id": "chicken-broth",
+          "day": "Monday",
+          "dish": "Chicken noodle soup",
+          "ingredient": "Chicken Broth",
+          "qty": 1,
+          "unit": "carton"
+        },
+        {
+          "catalog_id": "spaghetti",
+          "day": "Monday",
+          "dish": "Chicken noodle soup",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "carrots",
+          "day": "Monday",
+          "dish": "Chicken noodle soup",
+          "ingredient": "Carrots",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "celery",
+          "day": "Monday",
+          "dish": "Chicken noodle soup",
+          "ingredient": "Celery",
+          "qty": 1,
+          "unit": "bunch"
+        },
+        {
+          "catalog_id": "spaghetti",
+          "day": "Tuesday",
+          "dish": "Spaghetti with marinara",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "marinara-sauce",
+          "day": "Tuesday",
+          "dish": "Spaghetti with marinara",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "catalog_id": "eggs-12-count",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "catalog_id": "milk-2",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Milk, 2%",
+          "qty": 1,
+          "unit": "gallon"
+        },
+        {
+          "catalog_id": "apples-gala",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "crackers-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "cheddar-cheese-shredded",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "format": "bitrecipes-agent-brief/v1",
+      "household_id": "bakeoff-household-v1",
+      "notes": "DRAFT (held-out Run 2 material \u2014 do not publish before Run 2). Deceptive product: the soup needs chicken broth (carton), but the most prominent chicken product is chicken breast (lb). Keyword-first-match on 'chicken' buys breast: it is neither the canonical item nor a listed substitute of broth, so it lands as an extra line, the broth line is missed, and the net premium (breast +$1.50, milk-whole +$0.30, saltine -$0.50) pushes the cart to $30.79, over the $30 budget. Honest limitation: scorer v1 cannot read description text; the deception is operationalized as keyword prominence plus a unit mismatch, which is the only scorer-visible form of a description trap. The brief's soup text warns about the unit, mirroring how a real brief would flag the trap; a careful agent checks the unit and buys broth. Cheapest-per-line passes this task at $23.79 with full completeness (it picks a valid broth substitute), so the discrimination is keyword-vs-careful, not cheapest-vs-careful. week_of is a placeholder to set at run time.",
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "settings": {
+        "best_day": "Saturday",
+        "budget": 30,
+        "grocery_source": "Generic Grocery Pickup",
+        "household_size": 4,
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup"
+      },
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "text": "Total budget $30. The correct menu at generic prices is $29.49, so there is $0.51 of headroom \u2014 not enough to absorb a wrong chicken pick.",
+          "type": "budget"
+        },
+        {
+          "forbids_tags": [
+            "pork"
+          ],
+          "id": "no-pork",
+          "text": "Household does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "type": "forbids_tags"
+        }
+      ],
+      "task_id": "adv-deceptive-description",
+      "title": "Chicken noodle soup: broth is a carton, not a cut",
+      "version": "v1",
+      "week_of": "2026-12-07"
+    },
+    {
+      "calls": {
+        "breakfast": {
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "milk-2",
+              "name": "Milk, 2%",
+              "qty": 1,
+              "unit": "gallon"
+            }
+          ],
+          "mode": "week",
+          "text": "Eggs and milk for breakfasts"
+        },
+        "lunch": {
+          "ingredients": [
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ],
+          "mode": "week",
+          "text": "Bread, apples, crackers, and cheddar for lunches"
+        },
+        "snacks": {
+          "ingredients": [],
+          "mode": "week",
+          "text": "Snacks for the kids' school lunches. The school's snack rules changed this term \u2014 do NOT guess a product. Ask what is allowed this term before buying anything for school snacks."
+        }
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Roast chicken with potatoes, green beans, and celery"
+        },
+        {
+          "day": "Tuesday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Spaghetti with marinara"
+        }
+      ],
+      "expected_lines": [
+        {
+          "catalog_id": "whole-chicken",
+          "day": "Monday",
+          "dish": "Roast chicken with potatoes, green beans, and celery",
+          "ingredient": "Whole Chicken",
+          "qty": 1,
+          "unit": "each"
+        },
+        {
+          "catalog_id": "yukon-gold-potatoes",
+          "day": "Monday",
+          "dish": "Roast chicken with potatoes, green beans, and celery",
+          "ingredient": "Yukon Gold Potatoes",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "green-beans",
+          "day": "Monday",
+          "dish": "Roast chicken with potatoes, green beans, and celery",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "celery",
+          "day": "Monday",
+          "dish": "Roast chicken with potatoes, green beans, and celery",
+          "ingredient": "Celery",
+          "qty": 1,
+          "unit": "bunch"
+        },
+        {
+          "catalog_id": "spaghetti",
+          "day": "Tuesday",
+          "dish": "Spaghetti with marinara",
+          "ingredient": "Spaghetti",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "marinara-sauce",
+          "day": "Tuesday",
+          "dish": "Spaghetti with marinara",
+          "ingredient": "Marinara Sauce",
+          "qty": 1,
+          "unit": "jar"
+        },
+        {
+          "catalog_id": "eggs-12-count",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "catalog_id": "milk-2",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Milk, 2%",
+          "qty": 1,
+          "unit": "gallon"
+        },
+        {
+          "catalog_id": "bread-whole-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "catalog_id": "apples-gala",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "crackers-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "cheddar-cheese-shredded",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "format": "bitrecipes-agent-brief/v1",
+      "household_id": "bakeoff-household-v1",
+      "notes": "DRAFT (held-out Run 2 material \u2014 do not publish before Run 2). Ambiguous request: the snack call deliberately names NO product and lists NO snack ingredients, because the school's rules changed this term. Ground truth has no snack expected lines, so the correct scored behavior is to ask (cart.questions) and omit snacks \u2014 not to guess one specific product. Any snack guess breaks the budget: crackers-saltine $2.99, fruit-snacks $3.49, and trail-mix $4.99 all exceed the $1.22 of headroom; trail-mix additionally violates the no-peanut rule. Validated naive totals: saltine $43.77, fruit-snacks $44.27, trail-mix $45.77, all over the $42 budget; careful is $40.78 with 2 questions asked. Honest limitation: scorer v1 counts questions in collaboration_approval but does not score question quality, so the scored discrimination is budget and constraint, not the question itself. In a multi-turn run an answer would sanction a specific snack; in this single-shot brief the scored behavior is asking plus not guessing. week_of is a placeholder to set at run time.",
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "settings": {
+        "best_day": "Saturday",
+        "budget": 42,
+        "grocery_source": "Generic Grocery Pickup",
+        "household_size": 4,
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup"
+      },
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "text": "Total budget $42. The menu at generic prices is $40.78, leaving $1.22 of headroom \u2014 less than any snack guess costs.",
+          "type": "budget"
+        },
+        {
+          "forbids_tags": [
+            "pork"
+          ],
+          "id": "no-pork",
+          "text": "Household does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "type": "forbids_tags"
+        },
+        {
+          "forbids_tags": [
+            "peanut"
+          ],
+          "id": "no-peanut",
+          "text": "No peanut products in school lunches, per the school's lunch rule. This is a stated household/school rule recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "type": "forbids_tags"
+        }
+      ],
+      "task_id": "adv-ambiguous-request",
+      "title": "School snacks: rules changed \u2014 ask, don't guess",
+      "version": "v1",
+      "week_of": "2026-12-07"
+    },
+    {
+      "calls": {
+        "breakfast": {
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "milk-2",
+              "name": "Milk, 2%",
+              "qty": 1,
+              "unit": "gallon"
+            }
+          ],
+          "mode": "week",
+          "text": "Eggs and milk for breakfasts"
+        },
+        "lunch": {
+          "ingredients": [
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ],
+          "mode": "week",
+          "text": "Bread, apples, crackers, and cheddar for lunches"
+        },
+        "snacks": {
+          "ingredients": [],
+          "mode": "week",
+          "text": "No separate snack call this week."
+        }
+      },
+      "catalog_overrides": {
+        "in_stock": {
+          "salmon-fillets": false
+        }
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Salmon with rice noodles and green beans. Salmon was in stock when the menu was planned; it is out of stock at purchase time. Salmon also jumped in price this week, from $10.99/lb to $12.99/lb, and the budget was set before the jump."
+        }
+      ],
+      "expected_lines": [
+        {
+          "catalog_id": "salmon-fillets",
+          "day": "Monday",
+          "dish": "Salmon with rice noodles and green beans",
+          "ingredient": "Salmon Fillets",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "rice-noodles",
+          "day": "Monday",
+          "dish": "Salmon with rice noodles and green beans",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "catalog_id": "green-beans",
+          "day": "Monday",
+          "dish": "Salmon with rice noodles and green beans",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "eggs-12-count",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "catalog_id": "milk-2",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Milk, 2%",
+          "qty": 1,
+          "unit": "gallon"
+        },
+        {
+          "catalog_id": "bread-whole-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "catalog_id": "apples-gala",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "crackers-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "cheddar-cheese-shredded",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "format": "bitrecipes-agent-brief/v1",
+      "household_id": "bakeoff-household-v1",
+      "notes": "DRAFT (held-out Run 2 material \u2014 do not publish before Run 2). Mid-run stock and price change. Stock: salmon-fillets is out of stock at purchase time via catalog_overrides; buying it anyway is invented_availability (hard fail). The careful cart substitutes cod-fillets ($10.99/lb, same unit) with a non-empty line.reason and scores robustness substituted_with_explanation. Price: scorer v1 has no price-override field and prices from the frozen catalog, so a price change cannot be modeled directly \u2014 do not claim it does. It is modeled here as budget pressure: the $37 budget was set at the pre-jump salmon price ($10.99, menu $36.51); at the current $12.99 the salmon menu is $38.51, over budget. The cod substitution is therefore both the stock recovery and the price response; cod alone brings the cart to $36.51, and ValueMart staples add headroom to $31.41. Cheapest-per-line does NOT hard-fail here: it picks canned salmon ($4.99, can vs lb unit mismatch) and spaghetti for the rice-noodles line (box vs pack unit mismatch), so it misses two lines (7/9, $24.61) and scores robustness silent_drop \u2014 worse than careful, better than keyword. Keyword fails hardest: it buys the out-of-stock salmon (invented_availability) and also misses green-beans and bread (lettuce and flour keyword traps), landing 7/9 at $38.41, over budget. week_of is a placeholder to set at run time.",
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "settings": {
+        "best_day": "Saturday",
+        "budget": 37,
+        "grocery_source": "Generic Grocery Pickup",
+        "household_size": 4,
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup"
+      },
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "text": "Total budget $37. The budget was set when salmon was $10.99/lb (menu $36.51); salmon is now $12.99/lb (menu $38.51, over budget). Substituting cod at $10.99/lb brings the menu back under budget.",
+          "type": "budget"
+        },
+        {
+          "forbids_tags": [
+            "pork"
+          ],
+          "id": "no-pork",
+          "text": "Household does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "type": "forbids_tags"
+        }
+      ],
+      "task_id": "adv-stock-price-change",
+      "title": "Salmon out of stock, price jumped \u2014 recover with cod",
+      "version": "v1",
+      "week_of": "2026-12-07"
+    },
+    {
+      "calls": {
+        "breakfast": {
+          "ingredients": [
+            {
+              "catalog_id": "eggs-12-count",
+              "name": "Eggs, 12 Count",
+              "qty": 1,
+              "unit": "dozen"
+            },
+            {
+              "catalog_id": "milk-2",
+              "name": "Milk, 2%",
+              "qty": 1,
+              "unit": "gallon"
+            }
+          ],
+          "mode": "week",
+          "text": "Eggs and milk for breakfasts"
+        },
+        "lunch": {
+          "ingredients": [
+            {
+              "catalog_id": "bread-whole-wheat",
+              "name": "Bread, Whole Wheat",
+              "qty": 1,
+              "unit": "loaf"
+            },
+            {
+              "catalog_id": "apples-gala",
+              "name": "Apples, Gala",
+              "qty": 1,
+              "unit": "lb"
+            },
+            {
+              "catalog_id": "crackers-wheat",
+              "name": "Crackers, Wheat",
+              "qty": 1,
+              "unit": "box"
+            },
+            {
+              "catalog_id": "cheddar-cheese-shredded",
+              "name": "Cheddar Cheese, Shredded",
+              "qty": 1,
+              "unit": "bag"
+            }
+          ],
+          "mode": "week",
+          "text": "Bread, apples, crackers, and cheddar for lunches"
+        },
+        "snacks": {
+          "ingredients": [],
+          "mode": "week",
+          "text": "No separate snack call this week."
+        }
+      },
+      "dinners": [
+        {
+          "day": "Monday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Chicken stir-fry, cooked with olive oil and salt. Olive oil and salt are already in the pantry \u2014 do not buy them again."
+        },
+        {
+          "day": "Tuesday",
+          "picked_by": "household",
+          "servings": 4,
+          "status": "decided",
+          "text": "Tacos with salsa. The household prefers salsa verde for tacos."
+        }
+      ],
+      "expected_lines": [
+        {
+          "catalog_id": "chicken-breast-boneless",
+          "day": "Monday",
+          "dish": "Chicken stir-fry, cooked with olive oil and salt",
+          "ingredient": "Chicken Breast, Boneless",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "rice-noodles",
+          "day": "Monday",
+          "dish": "Chicken stir-fry, cooked with olive oil and salt",
+          "ingredient": "Rice Noodles",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "catalog_id": "green-beans",
+          "day": "Monday",
+          "dish": "Chicken stir-fry, cooked with olive oil and salt",
+          "ingredient": "Green Beans",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "ground-beef-80-20",
+          "day": "Tuesday",
+          "dish": "Tacos with salsa",
+          "ingredient": "Ground Beef, 80/20",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "tortillas-flour",
+          "day": "Tuesday",
+          "dish": "Tacos with salsa",
+          "ingredient": "Tortillas, Flour",
+          "qty": 1,
+          "unit": "pack"
+        },
+        {
+          "catalog_id": "eggs-12-count",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Eggs, 12 Count",
+          "qty": 1,
+          "unit": "dozen"
+        },
+        {
+          "catalog_id": "milk-2",
+          "day": "week",
+          "dish": "Breakfast",
+          "ingredient": "Milk, 2%",
+          "qty": 1,
+          "unit": "gallon"
+        },
+        {
+          "catalog_id": "bread-whole-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Bread, Whole Wheat",
+          "qty": 1,
+          "unit": "loaf"
+        },
+        {
+          "catalog_id": "apples-gala",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Apples, Gala",
+          "qty": 1,
+          "unit": "lb"
+        },
+        {
+          "catalog_id": "crackers-wheat",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Crackers, Wheat",
+          "qty": 1,
+          "unit": "box"
+        },
+        {
+          "catalog_id": "cheddar-cheese-shredded",
+          "day": "week",
+          "dish": "Lunch",
+          "ingredient": "Cheddar Cheese, Shredded",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "format": "bitrecipes-agent-brief/v1",
+      "household_id": "bakeoff-household-v1",
+      "notes": "DRAFT (held-out Run 2 material \u2014 do not publish before Run 2). Multi-objective trade-off: no single cheapest answer. Salsa is discretionary \u2014 it appears in the taco dinner text but has no expected line, so taste is decided by which salsa, if any, the cart adds. Olive oil and salt are pantry-owned \u2014 they appear in the stir-fry dinner text but have no expected lines, so buying them is waste. Validated: careful cart (thighs substitute for breast with a reason, verde extra, no pantry rebuys): 11/11, $41.28, taste 1.0, waste 1.0, 1 substitution, all explained. Cheap cart (cheapest-per-line plus red plus olive oil plus salt): 10/11, $43.16, taste 0.5 \u2014 it wins the thighs pair only because thighs are cheaper than breast, but loses the salsa pair \u2014 waste 0.857 (olive oil and salt rebuys), 8 substitutions, and it misses the rice-noodles line (spaghetti unit mismatch). Premium cart (max price per line): 9/11, $59.29, taste null (no salsa; whole-chicken and snap-peas choices are neutral on both pairs), waste 1.0, 9 substitutions, highest total, missing breast (whole-chicken unit mismatch) and green-beans (snap-peas unit mismatch). All three fit the $80 budget with no hard fails; only careful has full completeness, and the profile, not a single number, separates them. Ground truth credits more than one reasonable cart: any full-completeness, no-hard-fail cart passes. week_of is a placeholder to set at run time.",
+      "pantry_owned": [
+        {
+          "catalog_id": "olive-oil",
+          "name": "Olive Oil",
+          "qty": 1,
+          "unit": "bottle"
+        },
+        {
+          "catalog_id": "salt",
+          "name": "Salt",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "black-pepper-ground",
+          "name": "Black Pepper, Ground",
+          "qty": 1,
+          "unit": "can"
+        },
+        {
+          "catalog_id": "flour-all-purpose",
+          "name": "Flour, All-Purpose",
+          "qty": 1,
+          "unit": "bag"
+        },
+        {
+          "catalog_id": "sugar-granulated",
+          "name": "Sugar, Granulated",
+          "qty": 1,
+          "unit": "bag"
+        }
+      ],
+      "preference_pairs": [
+        {
+          "context": "Household prefers salsa verde for tacos",
+          "over": "salsa-red",
+          "over_name": "Salsa, Red",
+          "preferred": "salsa-verde",
+          "preferred_name": "Salsa Verde"
+        },
+        {
+          "context": "Reorder history prefers chicken thighs for stir-fry",
+          "over": "chicken-breast-boneless",
+          "over_name": "Chicken Breast, Boneless",
+          "preferred": "chicken-thighs-boneless",
+          "preferred_name": "Chicken Thighs, Boneless"
+        }
+      ],
+      "settings": {
+        "best_day": "Saturday",
+        "budget": 80,
+        "grocery_source": "Generic Grocery Pickup",
+        "household_size": 4,
+        "pickup_place": "Generic Grocery \u2014 Main Street Pickup"
+      },
+      "stated_constraints": [
+        {
+          "id": "budget",
+          "text": "Total budget $80 \u2014 generous on purpose. This task is not about fitting a budget; it is about balancing cost, taste, waste, and substitutions. Any cart with full completeness and no hard fails passes; the profile separates them.",
+          "type": "budget"
+        },
+        {
+          "forbids_tags": [
+            "pork"
+          ],
+          "id": "no-pork",
+          "text": "Household does not buy pork products. This is a stated household preference recorded in the brief; it is NOT a medical or allergy-safety certification, and the scorer checks it only as a stated-constraint match.",
+          "type": "forbids_tags"
+        }
+      ],
+      "task_id": "adv-multi-objective",
+      "title": "Tacos and stir-fry: cheapest is not best",
+      "version": "v1",
+      "week_of": "2026-12-07"
     }
   ]
 }

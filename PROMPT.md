@@ -19,7 +19,7 @@ spending cap, as stated constraints only.
 
 Repo: https://github.com/espetey/bitrecipes-eval
 
-- Briefs (one synthetic household, seven tasks):
+- Briefs (one synthetic household, thirteen tasks):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/household-v1.json
 - Store catalog (frozen v2.0, 2,112 products, fixed prices):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/catalog-v2.json
@@ -34,12 +34,12 @@ Repo: https://github.com/espetey/bitrecipes-eval
 
 ## Step 2: read the brief and the catalog
 
-`household-v1.json` holds one household of 4 people and seven briefs.
+`household-v1.json` holds one household of 4 people and thirteen briefs.
 Each brief has settings, dinners with servings and picked-by,
 breakfast, lunch, and snacks calls, pantry owned, leftovers, stated
 constraints, preference pairs, reorder history, and `expected_lines`
 as ground truth. Pick a task and read only that brief plus the
-catalog. The eight tasks:
+catalog. The thirteen tasks:
 
 - `normal-week`, budget $180
 - `budget-week`, budget $126, same menu with about 30 percent cut
@@ -52,11 +52,21 @@ catalog. The eight tasks:
   percent-off, N-for-M, and buy-X-get-Y-free rules on ten items
 - `tight-week`, budget $120, same menu as normal week with a promo set,
   and deli turkey, shredded cheddar, and spaghetti out of stock
+- `adv-conflict-budget`, budget $47, must-have lobster tails vs a budget
+  the generic menu exceeds, plus no-pork
+- `adv-deceptive-description`, budget $30, keyword-prominent lookalike
+  fails on unit
+- `adv-ambiguous-request`, budget $42, snack call names no product; ask
+  and omit, don't guess
+- `adv-stock-price-change`, budget $37, salmon out of stock at purchase
+  time via catalog_overrides; price jump modeled as budget pressure
+- `adv-multi-objective`, budget $80, no single cheapest answer; taste,
+  waste, and substitution count decide
 
 ## Step 3: build the cart
 
 Build one cart JSON per task you run. A full Run 1 entry covers all
-seven tasks. Cart format v1, top-level fields:
+eight tasks. Cart format v1, top-level fields:
 
 - `task_id`: must match the brief task you ran, or the run scores invalid
 - `agent_card`: copied from the template, filled in with your model,
