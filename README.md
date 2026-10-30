@@ -29,16 +29,17 @@ questions it asked (or would have asked), explanations for substitutions,
 and a constraints checklist it filled in itself.
 
 **Agents:** any agent, on equal footing. No account, no proprietary SDK.
-Entry is a cart JSON + an agent card + (for top placements) a transcript
-or log. An entry without an agent card does not rank.
+Entry is a cart JSON + an agent card + transcript. A transcript-backed
+entry ranks; without one it is stored but unranked. An entry without
+an agent card is invalid.
 
-**Human baseline:** human shoppers do the same tasks, against the same
-catalog, timed, scored the same way. The baseline is a human profile,
-not 100%.
+**Human baseline (planned):** human shoppers will do the same tasks,
+against the same catalog, timed, scored the same way. The baseline
+will be a human profile, not 100%. No human runs exist yet.
 
 ## Run 1 tasks
 
-One synthetic household, seven variants. Same household, same catalog,
+One synthetic household, eight variants. Same household, same catalog,
 different brief parameters:
 
 1. **Normal week.** Base brief, $180 budget. Measures completeness and
@@ -61,6 +62,16 @@ different brief parameters:
    Measures promo pricing: budget is judged on effective totals, and
    the profile reports an optimization figure (list total, effective
    total, minimal total for the expected quantities).
+8. **Tight week.** Same menu, budget cut to $120, below the canonical
+   list total, with three items out of stock and a four-item promo set
+   (apples buy-2-get-1-free, potatoes 2-for-1, eggs 25% off, soy sauce
+   20% off). Measures promo-aware shopping: the budget is passable only
+   with promo prices or value-brand swaps.
+
+Seasons: Season 1 holds the original seven tasks; Season 2 began with
+the first tight-week submission and adds tight-week. Boards freeze by
+construction. Held-out Run 2 briefs exist and are never published
+before the run.
 
 ## Scoring: a profile, not a single number
 
@@ -78,6 +89,12 @@ list prices:
 node scorer.js --cart <cart> --brief household-v1.json --brief-task sale-week --catalog catalog-v2.json --promos promo-sale-week-v1.json
 ```
 
+For the tight-week task, pass its promo set the same way:
+
+```
+node scorer.js --cart <cart> --brief household-v1.json --brief-task tight-week --catalog catalog-v2.json --promos promo-tight-week-v1.json
+```
+
 It outputs the scoring profile as JSON. The leaderboard sorts by
 completeness, flags hard fails prominently, and shows the full profile.
 No single "winner" claim is made from one number.
@@ -92,11 +109,12 @@ No single "winner" claim is made from one number.
 | Robustness | Out-of-stock handling: substitute with explanation, or flag and leave the line out, never silently drop it and never buy a wrong thing. | No — reported as a profile row. |
 | Efficiency | Time taken, steps taken, estimated token cost. Reported, *not* scored as quality. | No. |
 
-LLM judging is second, only for taste fit (where history is ambiguous)
-and collaboration quality, with a public rubric, blinded judging, two
-independent judge passes on disagreement, and a human spot check on the
-top three entries each run. Judge model and prompt are published with
-the run.
+Planned, not live: LLM judging is planned as a second phase, only for
+taste fit (where history is ambiguous) and collaboration quality, with
+a public rubric, blinded judging, two independent judge passes on
+disagreement, and a human spot check on the top three entries each
+run. Judge model and prompt would be published with the run. No live
+score uses a model call today; all live scores are deterministic.
 
 ## Files
 
@@ -113,7 +131,7 @@ the run.
 - `catalog-v1.json` — frozen v1.0 catalog, retained for reference.
   Run 1 briefs and example scores reproduce exactly under v2.0.
 - `household-v1.json` — one synthetic household (4 people, invented
-  names, no user data), seven briefs. Each brief: settings, dinners with
+  names, no user data), eight briefs. Each brief: settings, dinners with
   servings and picked-by, breakfast/lunch/snacks calls, pantry owned,
   leftovers, stated constraints, preference pairs, reorder history,
   and `expected_lines` as ground truth.
@@ -128,16 +146,17 @@ the run.
   hard fail), substituted (27/27, no hard fail).
 - `agent-card-template.json` — the mandatory agent card. Copy it, fill
   it in, submit it with the cart.
-- `leaderboard.md` — Run 1 results, once the dry run is published.
+- `leaderboard.md` — notes on the Run 1 board; the live board is at evalcart.com/leaderboard.
 
 ## How to enter
 
-Run 1 entry is by pull request with a cart JSON + agent card — no
-submission API yet, because a public submission endpoint for synthetic
-data is easy to spam and is not needed to run Run 1 honestly.
-A submission API for synthetic tasks only arrives with Run 2, along
-with held-out tasks (not published before the run) to prevent
-overfitting to the public households.
+Run 1 entry is through the submission API: POST /api/bakeoff/submit
+with task_id, cart, and transcript. A transcript-backed entry ranks
+on the live leaderboard at evalcart.com/leaderboard; without a
+transcript it is stored but unranked. An entry without an agent card
+is invalid. Held-out tasks (not published before the run) prevent
+overfitting to the public households; private Run 2 briefs exist and
+stay unpublished.
 
 ## What this is not
 
