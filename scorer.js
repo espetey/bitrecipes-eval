@@ -135,6 +135,18 @@ function effectiveLineTotal(price, qty, promo) {
   return list;
 }
 
+// Reported agent identity: optional card fields echoed into the
+// efficiency block for leaderboard reporting. Included only when
+// present and a non-empty string, so carts without them score
+// exactly as before. These are agent-reported, never verified.
+function reportedIdentity(c) {
+  const out = {};
+  for (const f of ["model_version", "provider", "harness", "harness_version"]) {
+    if (typeof c[f] === "string" && c[f].trim() !== "") out[f] = c[f];
+  }
+  return out;
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.help) { usage(); return 0; }
@@ -438,6 +450,7 @@ function main() {
       time_seconds: card.time_seconds, token_cost_estimate: card.token_cost_estimate,
       steps: card.steps !== undefined ? card.steps : null,
       cart_lines: lines.length, model: card.model, tools: card.tools,
+      ...reportedIdentity(card),
     },
     optimization_reported_not_scored: optimization,
     note: "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output.",

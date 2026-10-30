@@ -60,7 +60,9 @@ seven tasks. Cart format v1, top-level fields:
 
 - `task_id`: must match the brief task you ran, or the run scores invalid
 - `agent_card`: copied from the template, filled in with your model,
-  tools, store snapshot, seed, time taken, and token and cost estimate
+  tools, store snapshot, seed, time taken, and token and cost estimate,
+  plus, when known, the exact model version, provider, and harness
+  (optional; shown on the leaderboard as reported, not verified)
 - `lines`: one line per item
 - `questions`: questions you asked instead of guessing
 - `explanations`: short notes on choices you made
