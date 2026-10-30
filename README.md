@@ -39,7 +39,7 @@ will be a human profile, not 100%. No human runs exist yet.
 
 ## Run 1 tasks
 
-One synthetic household, eight variants. Same household, same catalog,
+One synthetic household, eleven variants. Same household, same catalog,
 different brief parameters:
 
 1. **Normal week.** Base brief, $180 budget. Measures completeness and
@@ -69,7 +69,7 @@ different brief parameters:
    with promo prices or value-brand swaps.
 
 Seasons: Season 1 holds the original seven tasks; Season 2 began with
-the first tight-week submission and adds tight-week. Boards freeze by
+the first tight-week submission and adds tight-week. Season 3 adds size-week, oos-hard-week, and promo-decoy-week, and begins with the first submission of any of them. Boards freeze by
 construction. Held-out Run 2 briefs exist and are never published
 before the run.
 
@@ -79,20 +79,26 @@ before the run.
 Run it:
 
 ```
-node scorer.js --cart <cart> --brief household-v1.json --brief-task <task> --catalog catalog-v2.json
+node scorer.js --cart <cart> --brief household-v1.json --brief-task <task> --catalog catalog-v3.json
 ```
 
 For the sale-week task, pass the promo set, or the cart scores at
 list prices:
 
 ```
-node scorer.js --cart <cart> --brief household-v1.json --brief-task sale-week --catalog catalog-v2.json --promos promo-sale-week-v1.json
+node scorer.js --cart <cart> --brief household-v1.json --brief-task sale-week --catalog catalog-v3.json --promos promo-sale-week-v1.json
 ```
 
 For the tight-week task, pass its promo set the same way:
 
 ```
-node scorer.js --cart <cart> --brief household-v1.json --brief-task tight-week --catalog catalog-v2.json --promos promo-tight-week-v1.json
+node scorer.js --cart <cart> --brief household-v1.json --brief-task tight-week --catalog catalog-v3.json --promos promo-tight-week-v1.json
+```
+
+For the promo-decoy-week task, pass its promo set the same way:
+
+```
+node scorer.js --cart <cart> --brief household-v1.json --brief-task promo-decoy-week --catalog catalog-v3.json --promos promo-decoy-week-v1.json
 ```
 
 It outputs the scoring profile as JSON. The leaderboard sorts by
@@ -128,10 +134,11 @@ score uses a model call today; all live scores are deterministic.
   not manufacturer or scraped copy). Brand definitions (tier +
   positioning note) live in the file's `brands` array. No real store,
   no scraped data, no real product data, no real brands.
+- `catalog-v3.json` — frozen synthetic catalog, v3.0. 2,212 SKUs: the v2.0 items plus pack-size and flavor variants, additive only (no v2.0 id, price, unit, or substitute entry changed).
 - `catalog-v1.json` — frozen v1.0 catalog, retained for reference.
   Run 1 briefs and example scores reproduce exactly under v2.0.
 - `household-v1.json` — one synthetic household (4 people, invented
-  names, no user data), eight briefs. Each brief: settings, dinners with
+  names, no user data), eleven briefs. Each brief: settings, dinners with
   servings and picked-by, breakfast/lunch/snacks calls, pantry owned,
   leftovers, stated constraints, preference pairs, reorder history,
   and `expected_lines` as ground truth.

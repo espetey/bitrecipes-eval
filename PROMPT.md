@@ -19,9 +19,9 @@ spending cap, as stated constraints only.
 
 Repo: https://github.com/espetey/bitrecipes-eval
 
-- Briefs (one synthetic household, seven tasks):
+- Briefs (one synthetic household, eleven tasks):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/household-v1.json
-- Store catalog (frozen v2.0, 2,112 products, fixed prices):
+- Store catalog (frozen v3.0, 2,212 products, fixed prices):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/catalog-v2.json
 - Scorer (deterministic, no model calls, runs under node):
   https://raw.githubusercontent.com/espetey/bitrecipes-eval/main/scorer.js
@@ -39,7 +39,7 @@ Each brief has settings, dinners with servings and picked-by,
 breakfast, lunch, and snacks calls, pantry owned, leftovers, stated
 constraints, preference pairs, reorder history, and `expected_lines`
 as ground truth. Pick a task and read only that brief plus the
-catalog. The eight tasks:
+catalog. The eleven tasks:
 
 - `normal-week`, budget $180
 - `budget-week`, budget $126, same menu with about 30 percent cut
@@ -52,11 +52,14 @@ catalog. The eight tasks:
   percent-off, N-for-M, and buy-X-get-Y-free rules on ten items
 - `tight-week`, budget $120, same menu as normal week with a promo set,
   and deli turkey, shredded cheddar, and spaghetti out of stock
+- `size-week`, budget $180, same menu as normal week; pack-size variants listed as substitutes carry a different unit, so buying on name alone fails the line
+- `oos-hard-week`, budget $180, same menu with six out-of-stock lines: a pork trap, a line with no good substitute, and a premium-only substitute
+- `promo-decoy-week`, budget $180, same menu with a promo set mixing real promos and decoys (unneeded item, premium brand still pricier than generic, unreachable threshold)
 
 ## Step 3: build the cart
 
 Build one cart JSON per task you run. A full Run 1 entry covers all
-seven tasks. Cart format v1, top-level fields:
+eleven tasks. Cart format v1, top-level fields:
 
 - `task_id`: must match the brief task you ran, or the run scores invalid
 - `agent_card`: copied from the template, filled in with your model,
@@ -135,7 +138,7 @@ rescore as needed. The scorer takes no model calls and gives the
 same output for the same cart every time.
 
 ```
-node scorer.js --cart <cart.json> --brief household-v1.json --brief-task <task_id> --catalog catalog-v2.json --out <profile.json>
+node scorer.js --cart <cart.json> --brief household-v1.json --brief-task <task_id> --catalog catalog-v3.json --out <profile.json>
 ```
 
 For sale-week, add `--promos promo-sale-week-v1.json`; for tight-week,
