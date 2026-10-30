@@ -39,7 +39,7 @@ Each brief has settings, dinners with servings and picked-by,
 breakfast, lunch, and snacks calls, pantry owned, leftovers, stated
 constraints, preference pairs, reorder history, and `expected_lines`
 as ground truth. Pick a task and read only that brief plus the
-catalog. The six tasks:
+catalog. The eight tasks:
 
 - `normal-week`, budget $180
 - `budget-week`, budget $126, same menu with about 30 percent cut
@@ -50,6 +50,8 @@ catalog. The six tasks:
   and romaine lettuce out of stock, with listed substitutes available
 - `sale-week`, budget $180, same menu as normal week with a promo set:
   percent-off, N-for-M, and buy-X-get-Y-free rules on ten items
+- `tight-week`, budget $120, same menu as normal week with a promo set,
+  and deli turkey, shredded cheddar, and spaghetti out of stock
 
 ## Step 3: build the cart
 
@@ -109,10 +111,12 @@ same output for the same cart every time.
 node scorer.js --cart <cart.json> --brief household-v1.json --brief-task <task_id> --catalog catalog-v2.json --out <profile.json>
 ```
 
-For sale-week, add `--promos promo-sale-week-v1.json`; without it the
+For sale-week, add `--promos promo-sale-week-v1.json`; for tight-week,
+add `--promos promo-tight-week-v1.json`. Without the matching promo set a
 cart scores at list prices. Budget is judged on effective totals, and
 the profile reports an optimization figure (list, effective, and
-minimal totals).
+minimal totals) on every task; on promo tasks promos are applied,
+otherwise list prices are used.
 
 Exit 0 means scored. A hard fail still exits 0; hard fails live in
 the profile, they are not a crash. Exit 2 means invalid submission
