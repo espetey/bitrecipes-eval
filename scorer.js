@@ -147,6 +147,79 @@ function reportedIdentity(c) {
   return out;
 }
 
+// Structured trace events (schema v0): an optional cart.trace array of
+// agent actions. Reported only, never scored: the behavior block below
+// observes the process, it never changes a score, a hard fail, or a
+// ranking. Fail-open: a missing, non-array, or over-cap trace yields a
+// null block and the cart scores exactly as before. Entry-level noise
+// (unknown types, non-object entries, extra fields) is filtered, the
+// way the storefront's event log is cleaned, never fatal.
+// Event shape: { type, product_id?, qty?, reason?, at_ms? }.
+// Types: search, view, add, remove, substitute, ask, undo, checkout.
+// The storefront's log uses the same field names; its substitute_add
+// maps to substitute here, and its UI-only types (oos_blocked, qty,
+// aisle, review, submit) are dropped.
+const TRACE_TYPES = new Set(["search", "view", "add", "remove", "substitute", "ask", "undo", "checkout"]);
+const MAX_TRACE_EVENTS = 2000;
+
+function normalizeTrace(trace) {
+  if (!Array.isArray(trace)) return null;
+  if (trace.length > MAX_TRACE_EVENTS) return null;
+  const out = [];
+  for (const e of trace) {
+    if (!e || typeof e !== "object" || Array.isArray(e)) continue;
+    let type = e.type;
+    if (type === "substitute_add") type = "substitute";
+    if (!TRACE_TYPES.has(type)) continue;
+    const clean = { type };
+    if (typeof e.product_id === "string" && e.product_id) clean.product_id = e.product_id.slice(0, 120);
+    if (Number.isInteger(e.qty)) clean.qty = e.qty;
+    if (typeof e.reason === "string" && e.reason) clean.reason = e.reason.slice(0, 200);
+    const at = Number(e.at_ms);
+    if (Number.isFinite(at) && at >= 0) clean.at_ms = Math.round(at);
+    out.push(clean);
+  }
+  return out;
+}
+
+// Behavioral signals from a normalized trace. Reported, not scored.
+// Returns null when there is no usable trace (absent, non-array, or
+// over cap); a present but empty trace yields zero counts.
+function behaviorFromTrace(trace, oosExpected, byId) {
+  if (!trace) return null;
+  const count = (t) => trace.filter((e) => e.type === t).length;
+  const firstBuy = trace.findIndex((e) => e.type === "add" || e.type === "substitute");
+  const searchesBeforeFirstAdd = firstBuy === -1
+    ? count("search")
+    : trace.slice(0, firstBuy).filter((e) => e.type === "search").length;
+  const buys = count("add") + count("substitute");
+  const undos = count("undo");
+  let oosTraceSubstitutes = null;
+  if (oosExpected && oosExpected.length) {
+    const subProducts = new Set(trace.filter((e) => e.type === "substitute" && e.product_id).map((e) => e.product_id));
+    oosTraceSubstitutes = oosExpected.filter((id) => {
+      const subs = (byId.get(id) && byId.get(id).substitutes) || [];
+      return subs.some((s) => subProducts.has(s));
+    }).length;
+  }
+  return {
+    trace_events: trace.length,
+    searches: count("search"),
+    views: count("view"),
+    adds: count("add"),
+    removes: count("remove"),
+    substitutes: count("substitute"),
+    asks: count("ask"),
+    undos,
+    checkouts: count("checkout"),
+    searches_before_first_add: searchesBeforeFirstAdd,
+    searched_before_buy: searchesBeforeFirstAdd > 0,
+    undo_rate: buys ? Math.round((undos / buys) * 1000) / 1000 : null,
+    oos_trace_substitutes: oosTraceSubstitutes,
+    note: "Reported, not scored: trace behavior is observed, not judged.",
+  };
+}
+
 // Efficiency benchmark (reported comparison only). Metrics derived
 // from a run's action trace plus its agent card. Reported, never
 // scored: this block never feeds a score, a hard fail, or a ranking.
@@ -435,6 +508,9 @@ function main() {
   const silentDrops = robustnessDetail.filter((r) => r.status === "silent_drop").map((r) => r.catalog_id);
   const robustness = oosExpected.length ? robustGood / oosExpected.length : 1;
 
+  // Trace behavior is reported only; it never feeds a score or a fail.
+  const behavior = behaviorFromTrace(normalizeTrace(cart.trace), oosExpected, byId);
+
   // ---- hard fails (plan §4: budget, stated constraints, ordering, invented availability)
   const hardFails = [];
   if (overBudget) hardFails.push("over_budget");
@@ -515,6 +591,7 @@ function main() {
       cart_lines: lines.length, model: card.model, tools: card.tools,
       ...reportedIdentity(card),
     },
+    behavior_reported_not_scored: behavior,
     optimization_reported_not_scored: optimization,
     efficiency_benchmark_reported_not_scored: efficiencyBenchmarkFromTrace(cart.trace, card, covered.length),
     note: "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output.",
