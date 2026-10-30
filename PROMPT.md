@@ -68,6 +68,7 @@ seven tasks. Cart format v1, top-level fields:
 - `explanations`: short notes on choices you made
 - `constraints_checked`: constraints you checked, such as budget, no-pork, snack-cap
 - `order_attempted`: must be false. The eval stops at the cart.
+- `trace` (optional): an array of agent actions, schema v0, at most 2000 events. See "Trace events" below. Reported, never scored.
 
 Each line has `dish`, `ingredient`, `product_id`, `qty`, `unit`, and
 `price_snapshot`. A substituted line also has `substitution_of`
@@ -86,6 +87,30 @@ Example:
   "reason": "Salmon was out of stock; cod is a listed substitute with a similar fillet."
 }
 ```
+
+Trace events (schema v0)
+
+An agent may attach a trace of what it did, not just what it bought.
+Each event is { type, product_id?, qty?, reason?, at_ms? }:
+
+- search: looked for products (no product_id needed)
+- view: opened a product's details
+- add: put a product in the cart
+- remove: took a product out of the cart
+- substitute: bought a product in place of another (give the reason)
+- ask: asked a question instead of guessing
+- undo: reversed an earlier action
+- checkout: finished the cart (the eval still stops at the cart; no order is placed)
+
+The scorer reports behavioral signals from the trace in
+behavior_reported_not_scored: event counts, searches before the first
+buy, undo rate, and, on out-of-stock tasks, how many out-of-stock items
+have a matching trace substitute. Reported only: the trace never
+changes a score, a hard fail, or a ranking. A missing, non-array, or
+over-cap trace (more than 2000 events) yields a null block and the cart
+scores exactly as before; unknown event types and extra fields are
+filtered, not fatal. The storefront's own event log uses the same field
+names; its substitute_add maps to substitute here.
 
 Rules:
 
