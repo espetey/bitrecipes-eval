@@ -220,6 +220,69 @@ function behaviorFromTrace(trace, oosExpected, byId) {
   };
 }
 
+// Efficiency benchmark (reported comparison only). Metrics derived
+// from a run's action trace plus its agent card. Reported, never
+// scored: this block never feeds a score, a hard fail, or a ranking.
+// Self-contained on purpose: it reads cart.trace directly and does
+// its own filtering, so it works whether or not the trace-behavior
+// block (a separate change) has landed. Fail-open: a missing,
+// non-array, or over-cap trace, or a trace with no usable events,
+// yields null, and the cart scores exactly as before. Untraced runs
+// get null, never zeros. Rates use covered lines as the denominator,
+// never expected lines, so a partial cart cannot look efficient by
+// covering less. Any rate whose denominator is zero or whose input
+// is missing or not a number is null, not zero.
+// Event types counted: search, view, add, remove, substitute, ask,
+// undo, checkout, adjust (adjust = a quantity change on an
+// already-added product). The storefront's substitute_add maps to
+// substitute; its UI-only types are not counted.
+const EFFICIENCY_TRACE_TYPES = new Set(["search", "view", "add", "remove", "substitute", "ask", "undo", "checkout", "adjust"]);
+const MAX_EFFICIENCY_TRACE_EVENTS = 2000;
+
+function efficiencyBenchmarkFromTrace(trace, card, coveredLines) {
+  if (!Array.isArray(trace) || trace.length > MAX_EFFICIENCY_TRACE_EVENTS) return null;
+  const counts = { search: 0, view: 0, add: 0, remove: 0, substitute: 0, ask: 0, undo: 0, checkout: 0, adjust: 0 };
+  let total = 0;
+  let firstAt = null, lastAt = null;
+  for (const e of trace) {
+    if (!e || typeof e !== "object" || Array.isArray(e)) continue;
+    let type = e.type;
+    if (type === "substitute_add") type = "substitute";
+    if (!EFFICIENCY_TRACE_TYPES.has(type)) continue;
+    counts[type]++;
+    total++;
+    const at = Number(e.at_ms);
+    if (Number.isFinite(at) && at >= 0) {
+      if (firstAt === null || at < firstAt) firstAt = at;
+      if (lastAt === null || at > lastAt) lastAt = at;
+    }
+  }
+  if (total === 0) return null;
+  const covered = Number(coveredLines) || 0;
+  const buys = counts.add + counts.substitute;
+  const round3 = (x) => Math.round(x * 1000) / 1000;
+  const time = Number((card || {}).time_seconds);
+  const cost = Number((card || {}).token_cost_estimate);
+  return {
+    trace_events: total,
+    covered_lines: covered,
+    adds: counts.add,
+    removes: counts.remove,
+    adjusts: counts.adjust,
+    undos: counts.undo,
+    searches: counts.search,
+    actions_per_line: covered > 0 ? round3(total / covered) : null,
+    delete_rate: counts.add > 0 ? round3(counts.remove / counts.add) : null,
+    adjust_rate: covered > 0 ? round3(counts.adjust / covered) : null,
+    undo_rate: buys > 0 ? round3(counts.undo / buys) : null,
+    search_rate: covered > 0 ? round3(counts.search / covered) : null,
+    time_per_line: covered > 0 && Number.isFinite(time) ? round3(time / covered) : null,
+    cost_per_line: covered > 0 && Number.isFinite(cost) ? round3(cost / covered) : null,
+    session_span_per_line: covered > 0 && firstAt !== null && lastAt !== null ? round3((lastAt - firstAt) / 1000 / covered) : null,
+    note: "Reported, not scored: efficiency is compared across runs, never judged or ranked.",
+  };
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.help) { usage(); return 0; }
@@ -530,6 +593,7 @@ function main() {
     },
     behavior_reported_not_scored: behavior,
     optimization_reported_not_scored: optimization,
+    efficiency_benchmark_reported_not_scored: efficiencyBenchmarkFromTrace(cart.trace, card, covered.length),
     note: "Profile, not a single number: no composite score is computed. LLM-judge second pass (ambiguous taste, collaboration quality) is separate and is not in this output.",
   };
 
